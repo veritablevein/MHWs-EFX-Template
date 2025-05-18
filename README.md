@@ -1,12 +1,9 @@
-# RE4 EFX Template
-EFX 010 template for Resident Evil 4 Remake.
+# MHWs EFX Template
+EFX 010 template for Monster Hunter Wilds.
 
-**UPDATE 4/3/2025**
+**UPDATE 5/18/2025**
 
-Template structure rewritten. Now supports most efx files for RE4.
-
-Note that this version of the efx template is temporary and will soon become obsolete when I release the new version with support for MH Wilds and more.
-
+Template structure rewritten. Now supports most efx files(7672/7676) for MHWs.
 
 ## EFX Color Change Script
 ![image](https://user-images.githubusercontent.com/46909075/232143830-d8a3bfac-7683-40b1-a830-99ce3a3a7e44.png)
@@ -26,3 +23,9 @@ The script is not intended to do all of the work. It will not work perfectly in 
 Requires **[010 Editor](https://www.sweetscape.com/010editor/)**
 
 Install the template under Templates > View Installed Templates > Add
+
+## Test Template
+Make sure 010 Editor Tools -> Options -> General -> Allow Only One Instance of 010 Editor is disabled
+```bash
+python BatchTemplateTest.py
+```

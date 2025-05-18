@@ -4,7 +4,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[14, 15, 16, 17, 18, 19, 20, 21, 22, 23] + 2800 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1;//Values:[0, 1]
 	float unkn2_0;//Values:[0.0, 0.009999999776482582, 0.029999999329447746, 0.03999999910593033, 0.05000000074505806, 0.05999999865889549, 0.07000000029802322, 0.07999999821186066, 0.10000000149011612, 0.10999999940395355] + 95 more
 	float unkn2_1;//Values:[0.0, 0.009999999776482582, 0.014999999664723873, 0.019999999552965164, 0.02500000037252903, 0.029999999329447746, 0.03999999910593033, 0.05000000074505806, 0.05999999865889549, 0.07000000029802322] + 96 more
@@ -16,7 +19,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[41, 53, 85, 113]
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1_0;//Values:[2]
 	float unkn1_1;//Values:[0.25, 1.0]
 	float unkn1_2;//Values:[0.10000000149011612, 0.5]
@@ -39,10 +46,18 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
-	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(191);
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint mhws_unkn1[unknSeqNum/4 - 1];
+	}
+	else
+	{
+		//STRUCT UNMAPPED
+		Printf("Unmapped Struct, template stopping.");
+		writeErrorToFile(191);
+	}
 
 }AngularVelocity2DDelayFrame<bgcolor=0x4081ec>;
 typedef struct
@@ -50,7 +65,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[14, 15, 16, 17, 22, 23, 24, 25, 26, 27] + 1156 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1_0;//Values:[0, 1, 2, 3, 4, 6]
 	uint unkn1_1;//Values:[0, 1, 2, 4, 5]
 	float unkn1_2;//Values:[-3.0, -1.0, -0.5, -0.20000000298023224, 0.0, 0.009999999776482582, 0.013000000268220901, 0.029999999329447746, 0.03999999910593033, 0.05000000074505806] + 69 more
@@ -78,7 +97,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[29, 32, 38, 92, 111, 122, 140, 152, 165, 188] + 9 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint frameDelay;//Values:[0, 2, 5, 30, 50, 60, 64, 72, 95, 121] + 3 more
 	uint unkn1;//Values:[0, 3]
 
@@ -88,6 +111,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[15, 16, 17, 22, 25, 27, 30, 32, 38, 40] + 540 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1_0;//Values:[0, 2, 5]
 	float unkn1_1;//Values:[-150.0, -120.0, -53.0, -45.0, -40.0, -30.0, -25.0, -20.0, -10.0, -8.0] + 24 more
 	float unkn1_2;//Values:[-200.0, -100.0, -80.0, -50.0, -30.0, -20.0, -15.0, -10.0, -9.0, -8.0] + 32 more
@@ -96,6 +124,10 @@ typedef struct
 	float unkn1_5;//Values:[0.0, 0.20000000298023224, 0.30000001192092896, 0.5, 0.6000000238418579, 0.75, 0.800000011920929, 1.0, 1.5, 1.600000023841858] + 21 more
 	float unkn1_6;//Values:[0.0, 0.15000000596046448, 0.20000000298023224, 0.30000001192092896, 0.5, 0.6000000238418579, 1.0, 1.2999999523162842, 1.5, 1.7000000476837158] + 27 more
 	float unkn1_7;//Values:[0.0, 0.10000000149011612, 0.20000000298023224, 0.25, 0.30000001192092896, 0.5, 0.699999988079071, 1.0, 1.5, 2.0] + 12 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		float mhws_unkn1[21];
+	}
 	uint boneNameLength;//Values:[2, 10, 16]
 	wstring boneName;//Values:[16]		 
 
@@ -105,7 +137,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[747, 2655, 6396, 6440, 12265, 17176]
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn0;//Values:[15]
 	uint null1;//Values:[0]
 	uint unkn2;//Values:[2]
@@ -145,7 +181,12 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[237, 396, 434, 634, 669, 745]
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint mhws_unkn1;
+	}
 	uint unkn1_0;//Values:[32]
 	uint unkn1_1;//Values:[2]
 	uint unkn1_2;//Values:[2]
@@ -158,7 +199,10 @@ typedef struct
 	uint unkn1_9;//Values:[2]
 	uint unkn1_10;//Values:[2]
 	uint solverSize;//Values:[28]
-	uint expression[solverSize/4];
+	if (solverSize != 0)
+	{
+		uint expression[solverSize/4];
+	}	
 
 }AttractorExpression<bgcolor=0xe78607>;
 typedef struct
@@ -166,7 +210,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 12, 13, 14, 15, 16, 17, 18, 20, 21] + 1818 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	float unkn1_0;//Values:[0.0, 0.009999999776482582, 0.019999999552965164, 0.03999999910593033, 0.05000000074505806, 0.05999999865889549, 0.07000000029802322, 0.07999999821186066, 0.10000000149011612, 0.10999999940395355] + 75 more
 	float unkn1_1;//Values:[0.38999998569488525, 0.46000000834465027, 0.47999998927116394, 0.5, 0.6000000238418579, 0.7300000190734863, 0.800000011920929, 0.8199999928474426, 0.8299999833106995, 0.8500000238418579] + 3 more
 	float unkn1_2;//Values:[0.009999999776482582, 0.05000000074505806, 0.10000000149011612, 0.15000000596046448, 0.20000000298023224, 0.25, 0.30000001192092896, 0.4000000059604645, 0.5, 0.6000000238418579] + 30 more
@@ -177,13 +224,20 @@ typedef struct
 	float unkn1_7;//Values:[0.0, 0.10000002384185791, 0.19999998807907104, 0.20000004768371582, 0.30000001192092896, 0.5, 1.0, 2.0, 3.0, 4.0] + 5 more
 	float unkn1_8;//Values:[0.0, 0.05000000074505806, 0.10000000149011612, 0.20000000298023224, 0.25, 0.30000001192092896, 0.4000000059604645, 0.5, 0.6000000238418579, 0.699999988079071] + 10 more
 	float unkn1_9;//Values:[0.0, 0.09999999403953552, 0.10000000894069672, 0.10000002384185791, 0.19999997317790985, 0.19999998807907104, 0.20000000298023224, 0.20000004768371582, 0.30000001192092896, 0.5] + 3 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		float mhws_unkn1;
+	}
 }Blink<bgcolor=0xe78607>;//Example: natives\NSW\vfx\editor\efd_pl\efd_l-swd\efd_0004_l-swd_99_0000.efx.2621987
 typedef struct
 {
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[14, 15, 16, 17, 18, 19, 20, 21, 22, 23] + 2445 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	Color color0;//Unconfirmed
 	Color color1;//Unconfirmed
 	float unkn1_0;//Values:[0.0, 0.05000000074505806, 0.10000000149011612, 0.30000001192092896, 0.3499999940395355, 0.5, 0.699999988079071, 1.0, 1.2000000476837158, 1.5] + 53 more
@@ -208,10 +262,18 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
-	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(170);
+	// if (VERSION >= VERSION_MHWs)
+	// {
+	// 	short mhws_unkn0;
+	// 	short mhws_flag;
+	// 	ubyte mhws_unkn1[unknSeqNum - 4];
+	// }
+	// else
+	// {
+		//STRUCT UNMAPPED
+		Printf("Unmapped Struct, template stopping.");
+		writeErrorToFile(170);
+	// }
 
 }CustomComputeShader<bgcolor=0x85aa32>;
 typedef struct
@@ -219,10 +281,18 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
-	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(162);
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint unkn0;
+	}
+	else
+	{
+		//STRUCT UNMAPPED
+		Printf("Unmapped Struct, template stopping.");
+		writeErrorToFile(162);
+	}
 
 }DepthOcclusion<bgcolor=0x85aa32>;
 typedef struct
@@ -230,10 +300,15 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
+	char mhws_unkn1[60];
 
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(159);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(159);
 
 }DepthOperator<bgcolor=0x0a2c0f>;
 typedef struct
@@ -285,6 +360,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 14, 15, 16, 17, 18, 19, 20, 21, 22] + 1314 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	enum <uint> 
     {
         DistortionType_Blur = 0,
@@ -295,12 +374,21 @@ typedef struct
 	float unkn3;//Values:[0.0, 0.009999999776482582, 0.019999999552965164, 0.05000000074505806, 0.10000000149011612, 0.15000000596046448, 0.20000000298023224, 0.25, 0.30000001192092896, 0.3499999940395355] + 127 more
 	float unkn4;//Values:[1.0, 1.100000023841858, 1.2000000476837158, 1.25, 1.2999999523162842, 1.3300000429153442, 1.399999976158142, 1.4299999475479126, 1.5, 1.600000023841858] + 137 more
 	Color color;
+	if (VERSION >= VERSION_MHWs)
+	{
+		float mhws_unkn1;
+		char mhws_unkn2;
+	}
 }Distortion<bgcolor=0x0a2c0f>/*META:ICON=ItemIconAlphaCorrection*/;//Example: natives\NSW\vfx\editor\efd_pl\efd_s-axe\efd_0004_s-axe_10_0000.efx.2621987
 typedef struct
 {
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[298, 322, 662, 698, 1210, 2978, 7159, 7173]
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1_0;//Values:[1, 4, 8]
 	uint unkn1_1;//Values:[2]
 	uint unkn1_2;//Values:[2]
@@ -308,7 +396,10 @@ typedef struct
 	uint unkn1_4;//Values:[2, 4]
 	uint unkn1_5;//Values:[2]
 	uint solverSize;//Values:[28, 44]
-	uint expression[solverSize/4];
+	if (solverSize != 0)
+	{
+		uint expression[solverSize/4];
+	}
 
 }DistortionExpression<bgcolor=0x2a6866>;
 typedef struct
@@ -316,8 +407,16 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
-	uint unkn0[3];
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint mhws_unkn1[unknSeqNum/4 - 1];
+	}
+	else
+	{
+		uint unkn0[3];
+	}
 
 }DrawOverlay<bgcolor=0x731727>;
 typedef struct
@@ -338,7 +437,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[70, 157, 165, 206, 216, 434, 441, 455, 520, 542] + 62 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1;//Values:[1, 4]//Might be wrong
 	
    
@@ -348,7 +450,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[116, 134, 200, 310, 315, 357, 409, 423, 561, 566] + 12 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1;//Values:[0, 1]
 	uint unkn2;//Values:[0, 1]
 	Color color;
@@ -359,7 +465,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[136, 312, 769, 778, 1028, 1045, 1540, 3760]
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn0;//Values:[15]
 	uint null1;//Values:[0]
 	uint unkn2;//Values:[2]
@@ -398,10 +508,15 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(203);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(203);
+	ubyte unkn[unknSeqNum - 4];
 
 }EmitterHSV<bgcolor=0x056e12>;
 typedef struct
@@ -420,14 +535,22 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[7, 9, 13, 19, 20, 23, 24, 25, 27, 29] + 367 more//This struct might not be right
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 }EmitterPriority<bgcolor=0x056e12>;//Example: natives\NSW\vfx\editor\efd_pl\efd_s-axe\efd_0004_s-axe_10_0000.efx.2621987
 typedef struct
 {
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[37, 49, 155]
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	float unkn1_0;//Values:[0.0, 3.0]
 	float unkn1_1;//Values:[10.0, 11.0]
 	float unkn1_2;//Values:[0.0, 1.0]
@@ -443,7 +566,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1_0;//Values:[1, 4, 8]
 	uint unkn1_1;//Values:[2]
 	uint unkn1_2;//Values:[2]
@@ -451,7 +578,10 @@ typedef struct
 	uint unkn1_4;//Values:[2, 4]
 	uint unkn1_5;//Values:[2]
 	uint solverSize;//Values:[28, 44]
-	uint expression[solverSize/4];
+	if (solverSize != 0)
+	{
+		uint expression[solverSize/4];
+	}
 
 }EmitterShape2DExpression<bgcolor=0xf57685>;
 typedef struct
@@ -459,6 +589,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[8, 11, 12, 13, 14, 15, 16, 17, 18, 19] + 4807 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	float RangeXMin;//Values:[0.0, 0.0010000000474974513, 0.004999999888241291, 0.009999999776482582, 0.019999999552965164, 0.02500000037252903, 0.029999999329447746, 0.03999999910593033, 0.05000000074505806, 0.05999999865889549] + 138 more
 	float RangeXMax;//Values:[0.0, 9.999999747378752e-05, 0.00019999999494757503, 0.0010000000474974513, 0.0020000000949949026, 0.009999999776482582, 0.014999999664723873, 0.019999999552965164, 0.02500000037252903, 0.029999999329447746] + 193 more
 	float RangeYMin;//Values:[-100.0, -90.0, -83.0, -77.0, -60.0, -50.29999923706055, -50.0, -49.79999923706055, -45.0, -40.0] + 161 more
@@ -498,7 +632,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[17, 18, 19, 20, 21, 33, 35, 37, 39, 41] + 159 more
-	
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1_0;//Values:[0, 2, 3, 4, 8, 12, 16, 17, 21, 32] + 13 more
 	uint unkn1_1;//Values:[0, 2, 4]
 	uint unkn1_2;//Values:[0, 2, 4]
@@ -518,7 +655,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[15, 16, 19, 22, 23, 27, 33, 41, 43, 46] + 334 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1_0;//Values:[0, 1, 2, 3, 4, 5, 7]
 	float unkn1_1;//Values:[0.008726646192371845, 0.01745329238474369, 0.0263544712215662, 0.03490658476948738, 0.05235987901687622, 0.0872664600610733, 0.10611601918935776, 0.1186823919415474, 0.1302015632390976, 0.13962633907794952] + 89 more
 	float unkn1_2;//Values:[0.0, 0.01745329238474369, 0.04520402476191521, 0.05235987901687622, 0.06981316953897476, 0.07941248267889023, 0.0872664600610733, 0.08936085551977158, 0.10471975803375244, 0.11658799648284912] + 62 more
@@ -544,12 +684,21 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[13, 14, 15, 16, 17, 18, 19, 20, 21, 22] + 3748 more
-	float unkn1;//Values:[0.0, 0.10000000149011612, 0.25, 0.30000001192092896, 0.5, 0.6000000238418579, 0.699999988079071, 0.75, 0.800000011920929, 1.0] + 54 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
+	if (VERSION < VERSION_MHWs)
+	{
+		float unkn1;//Values:[0.0, 0.10000000149011612, 0.25, 0.30000001192092896, 0.5, 0.6000000238418579, 0.699999988079071, 0.75, 0.800000011920929, 1.0] + 54 more
+	}
 	float unkn2;//Values:[0.0, 0.20000000298023224, 0.5, 0.6000000238418579, 0.800000011920929, 1.0, 1.2000000476837158, 1.5, 2.0, 2.200000047683716] + 56 more
 	float unkn3;//Values:[1.0, 2.0, 3.0, 4.0, 4.5, 5.0, 6.0, 7.0, 8.0, 9.0] + 62 more
 	float unkn4;//Values:[4.5, 5.0, 6.0, 6.5, 7.0, 8.0, 10.0, 11.0, 13.0, 14.0] + 72 more
-		  
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		float mhws_unkn1;
+	}
 
 }FadeByDepth<bgcolor=0x2f158b>/*META:ICON=ItemIconFadeByAngle*/;//Example: natives\NSW\vfx\editor\efd_pl\efd_l-swd\efd_0004_l-swd_99_0000.efx.2621987
 typedef struct
@@ -557,7 +706,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[2029]
-	
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1_0;//Values:[3]
 	uint unkn1_1;//Values:[2]
 	uint unkn1_2;//Values:[2]
@@ -572,13 +725,20 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[25, 32, 38, 39, 40, 46, 49, 52, 54, 58] + 309 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1_0;//Values:[0, 1]
 	float unkn1_1;//Values:[0.2617993950843811, 0.34400439262390137, 0.3490658402442932, 0.4363323450088501, 0.5235987901687622, 0.5398303270339966, 0.6981316804885864, 0.7820820212364197, 0.7853981852531433, 0.8086110353469849] + 34 more
 	float unkn1_2;//Values:[0.0, 0.1745329201221466, 0.2617993950843811, 0.3490658402442932, 0.3654719591140747, 0.4363323450088501, 0.45064401626586914, 0.5235987901687622, 0.6108652353286743, 0.6126105189323425] + 28 more
 	float unkn1_3;//Values:[0.0, 0.2800000011920929, 1.0]
 	float unkn1_4;//Values:[0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 15.860931396484375]
 	float unkn1_5;//Values:[0.0, 0.5, 1.0, 2.0, 3.0, 3.555809497833252, 4.0, 15.860931396484375]
+	if (VERSION >= VERSION_MHWs)
+	{
+		float mhws_unkn1;
+	}
 
 }FadeByEmitterAngle<bgcolor=0x02b72e>/*META:ICON=ItemIconFadeByAngle*/;
 typedef struct
@@ -586,7 +746,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[61, 4252, 4256, 4257, 4262, 4311, 4378, 4987, 5018, 5035] + 8 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	float unkn1;//Values:[1.0, 5.0]
 	uint null2;//Values:[0]
 	uint null3;//Values:[0]
@@ -609,10 +773,18 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
-	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(123);
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		float mhws_unkn1[unknSeqNum/4 - 1];
+	}
+	else
+	{
+		//STRUCT UNMAPPED
+		Printf("Unmapped Struct, template stopping.");
+		writeErrorToFile(123);
+	}
 
 }FakeDoF<bgcolor=0x363669>;
 typedef struct
@@ -620,7 +792,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 12, 13, 14, 16, 17, 18, 19, 20, 21] + 3341 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1_0;//Values:[1, 2, 3, 4, 5, 6, 8]
 	int unkn1_1;//Values:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] + 3922 more
 	int unkn1_2;//Values:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10] + 76 more
@@ -638,10 +813,18 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(205);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(205);
+
+	float unkn0[8];
+	uint texPathLength;
+	wstring texPath;
 
 }FlowMap<bgcolor=0x02b72e>;
 typedef struct
@@ -704,7 +887,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[254, 260, 271, 277, 351, 693, 703, 1717, 1817, 2475] + 3 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 }IgnorePlayerColor<bgcolor=0x85aa32>;//Example: natives\NSW\vfx\editor\efd_pl\efd_bow\efd_0004_bow_00_0100.efx.2621987
 typedef struct
 {
@@ -722,6 +909,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[4, 10, 11, 12, 13, 14, 15, 16, 17, 18] + 5903 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint AppearFrameMin;//Values:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] + 54 more
 	uint AppearFrameMax;//Values:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] + 60 more
 	uint KeepFrameMin;//Values:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] + 151 more
@@ -738,13 +929,23 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[31, 37, 63, 70, 89, 109, 123, 135, 144, 217] + 9 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint mhws_unkn1;
+		uint mhws_unkn2;
+		uint mhws_unkn3;
+	}
 	uint unkn1_0;//Values:[2, 6]
 	uint unkn1_1;//Values:[2]
 	uint unkn1_2;//Values:[2, 4]
 	uint unkn1_3;//Values:[1, 2, 4]
 	uint solverSize;//Values:[28, 56, 88]
-	uint expression[solverSize/4];
+	if (solverSize != 0)
+	{
+		uint expression[solverSize/4];
+	}
 
 }LifeExpression<bgcolor=0x5eac94>;//Example: natives\NSW\vfx\editor\efd_em\efd_em_shelltest\efd_0004_em000_02_0002.efx.2621987
 typedef struct
@@ -752,7 +953,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn0;
     float unkn1;
     float unkn2;
@@ -767,10 +972,19 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(146);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(146);
+	uint unkn[26];
+	struct{
+		uint xxxPathLength;
+		wstring xxxPath;
+	}xxxPath[6]<optimize=false>;
 
 }MeshEmitter<bgcolor=0x3f16f9>/*META:ICON=ItemIconEmitter*/;
 typedef struct
@@ -789,10 +1003,18 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
-	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(148);
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint mhws_unkn1[unknSeqNum/4 - 1];
+	}
+	else
+	{
+		//STRUCT UNMAPPED
+		Printf("Unmapped Struct, template stopping.");
+		writeErrorToFile(148);
+	}
 
 }MeshEmitterExpression<bgcolor=0xef6ade>;
 typedef struct
@@ -800,7 +1022,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 14, 15, 16, 17, 18, 20, 21, 23, 25] + 1356 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	float unkn1_0;//Values:[-0.5, 0.0, 0.004999999888241291, 0.009999999776482582, 0.014999999664723873, 0.019999999552965164, 0.02500000037252903, 0.029999999329447746, 0.042500004172325134, 0.04999999701976776] + 44 more
 	float unkn1_1;//Values:[0.0, 0.0020000000949949026, 0.004999999888241291, 0.007000000216066837, 0.009999999776482582, 0.014999999664723873, 0.017500001937150955, 0.019999999552965164, 0.02500000037252903, 0.029999999329447746] + 27 more
 	float unkn1_2;//Values:[-0.20000000298023224, 0.0, 0.003999999724328518, 0.009999999776482582, 0.014999999664723873, 0.019999999552965164, 0.029999999329447746, 0.05000000074505806, 0.05999999865889549, 0.07000000029802322] + 46 more
@@ -816,6 +1041,10 @@ typedef struct//unconfirmed
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[3, 8, 9, 10, 11, 13, 14, 15, 16, 17] + 5934 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	Int3 RelationPos;
 	Int3 RelationRot;
 	Int3 RelationScl;
@@ -835,10 +1064,15 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		float mhws_unkn1[unknSeqNum/4 - 1];
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(160);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(160);
 
 }PlaneCollider<bgcolor=0x4081ec>;
 typedef struct
@@ -857,7 +1091,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint efxPathLength;
 	wstring efxPath;
 
@@ -867,6 +1104,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 
 	uint fileSize;
 	local int pos = FTell();
@@ -879,6 +1120,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[12, 13, 14, 15, 16, 17, 19, 21, 22, 23] + 1485 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1;//Values:[0, 1, 2, 3]
 	float unkn2_0;//Values:[1.0]
 	float unkn2_1;//Values:[1.0, 2.0]
@@ -905,7 +1151,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[29, 42, 43, 104, 122, 130, 140, 247, 305, 2466] + 2 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn0;//Values:[8, 128, 136]
 	uint null1;//Values:[0]
 	int unkn2;//Values:[-1, 2]
@@ -975,7 +1225,10 @@ typedef struct
 	uint unkn1_17;//Values:[2]
 	uint unkn1_18;//Values:[2]
 	uint solverSize;//Values:[76]
-	uint expression[solverSize/4];
+	if (solverSize != 0)
+	{
+		uint expression[solverSize/4];
+	}
 
 }ProceduralDistortionExpression<bgcolor=0x2f158b>;
 typedef struct
@@ -983,10 +1236,18 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
-	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(193);
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		float mhws_unkn1[unknSeqNum/4 - 1];
+	}
+	else
+	{
+		//STRUCT UNMAPPED
+		Printf("Unmapped Struct, template stopping.");
+		writeErrorToFile(193);
+	}
 
 }PtAngularVelocity2D<bgcolor=0x08a9e5>;
 typedef struct
@@ -994,10 +1255,18 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
-	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(194);
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint mhws_unkn1[unknSeqNum/4 - 1];
+	}
+	else
+	{
+		//STRUCT UNMAPPED
+		Printf("Unmapped Struct, template stopping.");
+		writeErrorToFile(194);
+	}
 
 }PtAngularVelocity2DExpression<bgcolor=0x4081ec>;
 typedef struct
@@ -1005,10 +1274,15 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(189);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(189);
+	float unkn[unknSeqNum/4 - 1];
 
 }PtAngularVelocity3D<bgcolor=0x4081ec>;
 typedef struct
@@ -1016,10 +1290,20 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn[8];
+	uint solverSize;
+	if (solverSize != 0)
+	{
+		uint expression[solverSize/4];
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(190);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(190);
 
 }PtAngularVelocity3DExpression<bgcolor=0xfd1e6e>;
 typedef struct
@@ -1028,10 +1312,22 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 12, 13, 14, 15, 17, 18, 19, 20, 21] + 576 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1;//Values:[0, 2]
+	
+	if (VERSION < VERSION_MHWs)
+	{
+		uint substructCount;//Values:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] + 5 more
+	}
 	uint behaviorStringLength;//Values:[29, 32, 33, 34, 35, 36, 38, 53]
-	uint substructCount;//Values:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] + 5 more
 	string behaviorString;//Values:[9] + 2 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint substructCount;
+	}
 	if (substructCount != 0)
 	{
 		struct
@@ -1044,7 +1340,12 @@ typedef struct
                 PtBehaviorProp_float3 = 11,
                 PtBehaviorProp_range = 10,
                 PtBehaviorProp_uint = 4,
+                PtBehaviorProp_uint2 = 3,
+                PtBehaviorProp_string = 16,
+                PtBehaviorProp_string2 = 25,
+                PtBehaviorProp_string3 = 26,
                 PtBehaviorProp_int = 14,
+                PtBehaviorProp_int2 = 20,
                 PtBehaviorProp_wstring = 21,
                 PtBehaviorProp_prefabpath = 17,
                 PtBehaviorProp_enum = 18,
@@ -1052,12 +1353,12 @@ typedef struct
                 
             }dataType;
 			uint unkn2;
-            uint dataSize;
-            if (VERSION >= VERSION_RE4)
-            {
-                short re4_unkn0;
-                short re4_unkn1;
-		    }
+			uint dataSize;
+			if (VERSION >= VERSION_RE4)
+			{
+				short re4_unkn0;
+				short re4_unkn1;
+			}
 			switch(dataType)
             {
                 case PtBehaviorProp_float:
@@ -1085,9 +1386,34 @@ typedef struct
                     uint propertyValue;
                     break;
                 }
+                case PtBehaviorProp_uint2:
+                {
+                    uint propertyValue;
+                    break;
+                }
+                case PtBehaviorProp_string:
+                {
+                    char propertyValue[dataSize];
+                    break;
+                }
+								case PtBehaviorProp_string2:
+								{
+										char propertyValue[dataSize];
+										break;
+								}
+								case PtBehaviorProp_string3:
+								{
+										char propertyValue[dataSize];
+										break;
+								}
                 case PtBehaviorProp_int:
                 {
                     int propertyValue;
+                    break;
+                }
+                case PtBehaviorProp_int2:
+                {
+                    Int2 propertyValue;
                     break;
                 }
                 case PtBehaviorProp_wstring:
@@ -1107,8 +1433,8 @@ typedef struct
                 }
                 case PtBehaviorProp_enum:
                 {
-                    uint propertyValue<read=ReadPtBehaviorEnum>;
-                    break;
+									uint propertyValue<read=ReadPtBehaviorEnum>;
+									break;
                 }
                 default:
                 {
@@ -1117,7 +1443,10 @@ typedef struct
                     break;
                 }
             }//##END ENUM FACTORY DEF##
-            
+						if (VERSION >= VERSION_MHWs)
+						{
+							uint mhws_unkn1;
+						}
             string behaviorPropertyString;
 		}property[substructCount]<optimize=false>;
 	}
@@ -1142,7 +1471,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	ubyte stringBitFlag<format=binary,comment = "bitflag, determines whether there will be strings read">;
 	ubyte unkn0_1;
     ubyte unkn0_2;
@@ -1150,6 +1482,11 @@ typedef struct
     float unkn1;
 	float unkn2;
 	uint linkedAction;
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn1;
+		uint mhws_unkn2;
+	}
     if ((stringBitFlag & (1 << 0)) != 0)//Check bit 0 to see if string 0 should be used
     {
         uint unknString0Length;
@@ -1160,6 +1497,10 @@ typedef struct
         uint unknString1Length;
         wstring unknString1;
     }
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn3;
+	}
 
 }PtColliderAction<bgcolor=0x363669>;
 typedef struct
@@ -1167,44 +1508,53 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	ubyte stringBitFlag<format=binary,comment = "bitflag, determines whether there will be strings read">;
-    ubyte unkn0_1;
-    ubyte unkn0_2;
-    ubyte unkn0_3;
-    float unkn1;
-    float unkn2;
-    uint unkn3;
-    uint unkn4;
-    float unkn5;
-    float unkn6;
-    float unkn7;
-    float unkn8;
-    uint unkn9;
-    float unkn10;
-    float unkn11;
-    float unkn12;
-    float unkn13;
-    float unkn14;
-    float unkn15;
-    float unkn16;
-    if ((stringBitFlag & (1 << 0)) != 0)//Check bit 0 to see if string 0 should be used
-    {
-        uint unknString0Length;
-        wstring unknString0;
-    }
-    if ((stringBitFlag & (1 << 1)) != 0)//Check bit 1 to see if string 1 should be used
-    {
-        uint unknString1Length;
-        wstring unknString1;
-    }
+	ubyte unkn0_1;
+	ubyte unkn0_2;
+	ubyte unkn0_3;
+	float unkn1;
+	float unkn2;
+	uint unkn3;
+	uint unkn4;
+	float unkn5;
+	float unkn6;
+	float unkn7;
+	float unkn8;
+	uint unkn9;
+	float unkn10;
+	float unkn11;
+	float unkn12;
+	if (VERSION < VERSION_MHWs)
+	{
+	float unkn13;
+	float unkn14;
+	float unkn15;
+	float unkn16;
+	}
+	if ((stringBitFlag & (1 << 0)) != 0)//Check bit 0 to see if string 0 should be used
+	{
+		uint unknString0Length;
+		wstring unknString0;
+	}
+	if ((stringBitFlag & (1 << 1)) != 0)//Check bit 1 to see if string 1 should be used
+	{
+		uint unknString1Length;
+		wstring unknString1;
+	}
 }PtCollision<bgcolor=0xe78607>;
 typedef struct
 {
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[17, 23, 24, 31, 39, 46, 61, 74, 80, 86] + 113 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1;//Values:[0, 1]
 	uint unkn2;//Values:[0, 1]
 	Color color0;		 
@@ -1215,7 +1565,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[19, 26, 28, 30, 32, 41, 48, 63, 77, 88] + 122 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn0;//Values:[8, 15]
 	uint unkn1;//Values:[0, 1]
 	int unkn2;//Values:[-1, 2]
@@ -1254,7 +1607,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[12, 15, 17, 18, 20, 21, 23, 25, 27, 31] + 485 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1_0;//Values:[0, 1, 2, 3, 4]
 	uint unkn1_1;//Values:[0, 1, 2, 3, 4]
 	int actionIndex;//Values:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] + 1 more
@@ -1265,7 +1621,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[19, 28, 30, 31, 35, 42, 43, 116, 121, 123] + 68 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint null1;//Values:[0]
 	
 }PtSort<bgcolor=0x363669>;//Example: natives\NSW\vfx\editor\efd_hm\efd_hm04\efd_0004_hm04_006_00_0000.efx.2621987
@@ -1296,7 +1655,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[16, 17, 21, 29, 31, 40, 45, 52, 56, 85] + 55 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint null1_0;//Values:[0]
 	uint null1_1;//Values:[0]
 	uint null1_2;//Values:[0]
@@ -1313,7 +1676,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[23, 31, 33, 42, 46, 58, 59, 62, 87, 94] + 53 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn0;//Values:[1, 2, 7, 28, 34, 36, 192, 448]
 	uint unkn1;//Values:[0, 1]
 	int unkn2;//Values:[-1, 2]
@@ -1424,7 +1791,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 29]
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint null1_0;//Values:[0]
 	float unkn1_1;//Values:[0.0, 1.0]
 	uint null1_2;//Values:[0]
@@ -1436,7 +1807,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[14, 31]
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn0;//Values:[8, 15]
 	uint unkn1;//Values:[0, 1]
 	int unkn2;//Values:[-1]
@@ -1486,7 +1861,14 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[59, 1238, 2204, 2466]
-    if (VERSION >= VERSION_RE4)
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint mhws_unkn1;
+		Color mhws_unkn2;
+	}
+    if (VERSION >= VERSION_RE4 && VERSION < VERSION_MHWs)
     {
         uint re4_unkn[4];
     }
@@ -1496,6 +1878,10 @@ typedef struct
 	float unkn1_1;//Values:[10.0]
 	float unkn1_2;//Values:[5.0]
 	Color unkn1_3;//Values:[]
+	if (VERSION >= VERSION_MHWs)
+	{
+		Color mhws_unkn3;
+	}
 	float unkn1_4;//Values:[1.0]
 	float unkn1_5;//Values:[0.5]
 	float unkn1_6;//Values:[0.5]
@@ -1521,10 +1907,22 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(207);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(207);
+	Color color0;
+	float unkn0;
+	float unkn1;
+	Color color1;
+	float unkn2;
+	float unkn3;
+	float unkn4;
+	char unkn5[67];
+	uint unkn6[5];
 
 }RgbWater<bgcolor=0xef6ade>;
 typedef struct
@@ -1532,6 +1930,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 12, 13, 14, 15, 16, 17, 18, 19, 20] + 3465 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1_0;//Values:[0, 1]
 	float rotateSpeedX;//Values:[-0.6981317400932312, -0.4014257490634918, -0.39269909262657166, -0.3490658700466156, -0.2967059910297394, -0.2617993950843811, -0.1745329350233078, -0.15707963705062866, -0.13962635397911072, -0.12217305600643158] + 125 more
 	float rotateSpeedXRandom;//Values:[0.0, 8.726646046852693e-05, 0.00017453292093705386, 0.0003490658418741077, 0.0004363323387224227, 0.0005235988064669073, 0.0006981316837482154, 0.0008726646774448454, 0.0010471976129338145, 0.0013089970452710986] + 33 more
@@ -1545,8 +1947,11 @@ typedef struct
 	float unkn4_5;//Values:[0.0, 0.0020000000949949026, 0.004999999888241291, 0.009999999776482582, 0.019999999552965164]
 	float unkn4_6;//Values:[0.0, 0.6000000238418579, 0.699999988079071, 0.800000011920929, 0.8999999761581421, 0.9300000071525574, 0.9399999976158142, 0.949999988079071, 0.9599999785423279, 0.9700000286102295] + 14 more
 	float unkn4_7;//Values:[0.0, 0.0020000000949949026, 0.004999999888241291, 0.009999999776482582, 0.019999999552965164]
-	
-	
+	if (VERSION >= VERSION_MHWs)
+	{
+		float mhws_unkn1;
+		float mhws_unkn2;
+	}
 
 }RotateAnim<bgcolor=0x3a2006>/*META:ICON=ItemIconRotateAnim*/;//Example: natives\NSW\vfx\editor\efd_pl\efd_l-swd\efd_0004_l-swd_00_0010.efx.2621987
 typedef struct
@@ -1554,7 +1959,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[27, 32, 43, 46, 54, 58, 64, 85, 98, 115] + 62 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint frameDelay;//Values:[0, 1, 2, 15, 20, 22, 25, 26, 28, 30] + 13 more
 	uint unkn2;//Values:[0, 3, 5, 10, 15]
 
@@ -1564,10 +1973,19 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(74);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(74);
+	uint unkn0[13];
+	uint solverSize;
+	if (solverSize != 0)
+	{
+		uint expression[solverSize/4];
+	}
 
 }RotateAnimExpression<bgcolor=0x85aa32>;
 typedef struct
@@ -1575,31 +1993,42 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 12, 13, 14, 15, 16, 17, 18, 19, 20] + 4954 more
-
-				float minScale;//Values:[-6.0, -5.0, -3.5, -3.0, -2.700000047683716, -2.5, -2.0, -1.7000000476837158, -1.5, -1.2999999523162842] + 246 more
-				float unkn1_1;//Values:[0.0, 9.999999747378752e-05, 0.00019999999494757503, 0.0002500000118743628, 0.00039999998989515007, 0.0005000000237487257, 0.0010000000474974513, 0.001500000013038516, 0.0020000000949949026, 0.0024999999441206455] + 33 more
-				float maxScale;//Values:[0.0, 0.10000000149011612, 0.5, 0.550000011920929, 0.6000000238418579, 0.6499999761581421, 0.699999988079071, 0.7400000095367432, 0.75, 0.7799999713897705] + 72 more
-				float unkn1_3;//Values:[0.0, 0.0010000000474974513, 0.0020000000949949026, 0.0024999999441206455, 0.003000000026077032, 0.004999999888241291, 0.00800000037997961, 0.009999999776482582, 0.019999999552965164, 0.05000000074505806] + 1 more
-				float unkn1_4;//Values:[-11.0, -2.0, -1.0, -0.8999999761581421, -0.550000011920929, -0.5, -0.4000000059604645, -0.30000001192092896, -0.25, -0.23000000417232513] + 108 more
-				float unkn1_5;//Values:[0.0, 9.999999747378752e-05, 0.0003000000142492354, 0.0005000000237487257, 0.0010000000474974513, 0.0020000000949949026, 0.0024999999441206455, 0.003000000026077032, 0.004999999888241291, 0.009999999776482582] + 5 more
-				float unkn1_6;//Values:[0.0, 0.009999999776482582, 0.550000011920929, 0.6000000238418579, 0.6100000143051147, 0.699999988079071, 0.7250000238418579, 0.75, 0.800000011920929, 0.8199999928474426] + 39 more
-				float unkn1_7;//Values:[0.0, 0.0005000000237487257, 0.0010000000474974513, 0.004999999888241291, 0.009999999776482582, 0.20000000298023224]
-				float unkn1_8;//Values:[-2.0, -1.0789999961853027, -1.0, -0.8999999761581421, -0.8500000238418579, -0.800000011920929, -0.75, -0.5, -0.4000000059604645, -0.30000001192092896] + 105 more
-				float unkn1_9;//Values:[0.0, 0.0005000000237487257, 0.0010000000474974513, 0.0020000000949949026, 0.0024999999441206455, 0.003000000026077032, 0.004999999888241291, 0.009999999776482582, 0.014999999664723873, 0.019999999552965164] + 9 more
-				float unkn1_10;//Values:[0.0, 0.5, 0.550000011920929, 0.5849999785423279, 0.6000000238418579, 0.6200000047683716, 0.699999988079071, 0.7300000190734863, 0.75, 0.7799999713897705] + 36 more
-				float unkn1_11;//Values:[0.0, 0.0005000000237487257, 0.004999999888241291, 0.20000000298023224, 2.0]
-				float unkn1_12;//Values:[-30.0, -10.0, -1.0, -0.550000011920929, -0.30000001192092896, -0.23000000417232513, -0.20000000298023224, -0.15000000596046448, -0.11999999731779099, -0.10000000149011612] + 60 more
-				float unkn1_13;//Values:[0.0, 0.0024999999441206455, 0.004999999888241291, 0.009999999776482582, 0.019999999552965164]
-				float unkn1_14;//Values:[0.0, 0.029999999329447746, 0.6000000238418579, 0.699999988079071, 0.75, 0.800000011920929, 0.8299999833106995, 0.8799999952316284, 0.8999999761581421, 0.9100000262260437] + 16 more
-				float unkn1_15;//Values:[0.0, 0.004999999888241291, 0.20000000298023224]
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
+	float minScale;//Values:[-6.0, -5.0, -3.5, -3.0, -2.700000047683716, -2.5, -2.0, -1.7000000476837158, -1.5, -1.2999999523162842] + 246 more
+	float unkn1_1;//Values:[0.0, 9.999999747378752e-05, 0.00019999999494757503, 0.0002500000118743628, 0.00039999998989515007, 0.0005000000237487257, 0.0010000000474974513, 0.001500000013038516, 0.0020000000949949026, 0.0024999999441206455] + 33 more
+	float maxScale;//Values:[0.0, 0.10000000149011612, 0.5, 0.550000011920929, 0.6000000238418579, 0.6499999761581421, 0.699999988079071, 0.7400000095367432, 0.75, 0.7799999713897705] + 72 more
+	float unkn1_3;//Values:[0.0, 0.0010000000474974513, 0.0020000000949949026, 0.0024999999441206455, 0.003000000026077032, 0.004999999888241291, 0.00800000037997961, 0.009999999776482582, 0.019999999552965164, 0.05000000074505806] + 1 more
+	float unkn1_4;//Values:[-11.0, -2.0, -1.0, -0.8999999761581421, -0.550000011920929, -0.5, -0.4000000059604645, -0.30000001192092896, -0.25, -0.23000000417232513] + 108 more
+	float unkn1_5;//Values:[0.0, 9.999999747378752e-05, 0.0003000000142492354, 0.0005000000237487257, 0.0010000000474974513, 0.0020000000949949026, 0.0024999999441206455, 0.003000000026077032, 0.004999999888241291, 0.009999999776482582] + 5 more
+	float unkn1_6;//Values:[0.0, 0.009999999776482582, 0.550000011920929, 0.6000000238418579, 0.6100000143051147, 0.699999988079071, 0.7250000238418579, 0.75, 0.800000011920929, 0.8199999928474426] + 39 more
+	float unkn1_7;//Values:[0.0, 0.0005000000237487257, 0.0010000000474974513, 0.004999999888241291, 0.009999999776482582, 0.20000000298023224]
+	float unkn1_8;//Values:[-2.0, -1.0789999961853027, -1.0, -0.8999999761581421, -0.8500000238418579, -0.800000011920929, -0.75, -0.5, -0.4000000059604645, -0.30000001192092896] + 105 more
+	float unkn1_9;//Values:[0.0, 0.0005000000237487257, 0.0010000000474974513, 0.0020000000949949026, 0.0024999999441206455, 0.003000000026077032, 0.004999999888241291, 0.009999999776482582, 0.014999999664723873, 0.019999999552965164] + 9 more
+	float unkn1_10;//Values:[0.0, 0.5, 0.550000011920929, 0.5849999785423279, 0.6000000238418579, 0.6200000047683716, 0.699999988079071, 0.7300000190734863, 0.75, 0.7799999713897705] + 36 more
+	float unkn1_11;//Values:[0.0, 0.0005000000237487257, 0.004999999888241291, 0.20000000298023224, 2.0]
+	float unkn1_12;//Values:[-30.0, -10.0, -1.0, -0.550000011920929, -0.30000001192092896, -0.23000000417232513, -0.20000000298023224, -0.15000000596046448, -0.11999999731779099, -0.10000000149011612] + 60 more
+	float unkn1_13;//Values:[0.0, 0.0024999999441206455, 0.004999999888241291, 0.009999999776482582, 0.019999999552965164]
+	float unkn1_14;//Values:[0.0, 0.029999999329447746, 0.6000000238418579, 0.699999988079071, 0.75, 0.800000011920929, 0.8299999833106995, 0.8799999952316284, 0.8999999761581421, 0.9100000262260437] + 16 more
+	float unkn1_15;//Values:[0.0, 0.004999999888241291, 0.20000000298023224]
+	
+	if (VERSION >= VERSION_MHWs)
+	{
+		float mhws_unkn1;
+		float mhws_unkn2;
+	}
 }ScaleAnim<bgcolor=0x2a6866>/*META:ICON=ItemIconScaleAnim*/;//Example: natives\NSW\vfx\editor\efd_pl\efd_l-swd\efd_0004_l-swd_00_0010.efx.2621987
 typedef struct
 {
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[13, 18, 23, 33, 34, 40, 45, 56, 57, 66] + 193 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint frameDelay;//Values:[0, 1, 2, 3, 4, 5, 6, 8, 9, 10] + 29 more
 	uint unkn2;//Values:[0, 1, 2, 3, 5, 10, 50]
 
@@ -1610,6 +2039,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[260, 2969, 3001, 3050, 3098, 3099, 3509, 4078, 6540, 6825] + 3 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1;//Values:[1, 16]
 	uint unkn2;//Values:[0, 1, 2, 4]
 	uint unkn3;//Values:[0, 2]
@@ -1624,7 +2058,10 @@ typedef struct
     }
 	
 	uint solverSize;//Values:[44, 68, 256]
-	uint expression[solverSize/4];
+	if (solverSize != 0)
+	{
+		uint expression[solverSize/4];
+	}
 
 }ScaleAnimExpression<bgcolor=0xf57685>;//Example: natives\NSW\vfx\editor\efd_em\efd_em099\efd_0004_em099_00_0130.efx.2621987
 typedef struct
@@ -1632,6 +2069,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[17, 19, 20, 21, 30, 33, 41, 42, 45, 47] + 521 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1;//Values:[0, 1, 3]
 	float unkn2_0;//Values:[0.009999999776482582, 1.0, 1.5, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0] + 9 more
 	float unkn2_1;//Values:[0.009999999776482582, 0.5, 0.6000000238418579, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0] + 18 more
@@ -1657,6 +2098,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 13, 14, 15, 16, 17, 18, 19, 20, 21] + 5834 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	float unkn1;//Values:[-100.0, -25.0, -20.0, -8.0, -7.0, -6.0, -5.0, -4.0, -3.0, -2.0] + 62 more
 	uint unkn2;//Values:[0, 1, 2, 3, 4]
     if (VERSION >= VERSION_RERT)
@@ -1680,7 +2125,7 @@ typedef struct
 	float null15;//Values:[0.0]
 	float null16;//Values:[0.0]
 	float unkn17;//Values:[0.0, 0.009999999776482582, 0.05000000074505806, 0.0784313753247261, 0.10000000149011612, 0.10999999940395355, 0.11999999731779099, 0.12156862765550613, 0.12999999523162842, 0.14901961386203766] + 44 more
-	uint unkn18;//Values:[1025705299, 1028389654, 1028443341, 1031831681, 1032358025, 1033937057, 1034120751, 1034989745, 1036568777, 1036805105] + 23 more
+	float unkn18;//Values:[1025705299, 1028389654, 1028443341, 1031831681, 1032358025, 1033937057, 1034120751, 1034989745, 1036568777, 1036805105] + 23 more
     if (VERSION >= VERSION_RERT)
     {
         uint sb_unkn2<comment="Required Version: MHRSB (.2818730) or above">;
@@ -1697,7 +2142,7 @@ typedef struct
 	float unkn24;//Values:[0.0, 1.401298464324817e-45]
     if (VERSION >= VERSION_RERT)
     {
-        uint sb_unkn6<comment="Required Version: MHRSB (.2818730) or above">;//Values:[72, 255]
+			uint sb_unkn6<comment="Required Version: MHRSB (.2818730) or above">;//Values:[72, 255]
 	    uint sb_null7<comment="Required Version: MHRSB (.2818730) or above">;//Values:[0]
 	    uint sb_unkn8<comment="Required Version: MHRSB (.2818730) or above">;//Values:[255]
 	    uint sb_unkn9<comment="Required Version: MHRSB (.2818730) or above">;//Values:[255]
@@ -1706,20 +2151,34 @@ typedef struct
 	    uint sb_unkn12<comment="Required Version: MHRSB (.2818730) or above">;//Values:[255] 
     }
 	
-    if (VERSION >= VERSION_RE4)
+    if (VERSION >= VERSION_RE4 && VERSION < VERSION_MHWs)
     {
         uint re4_unkn[4];
     }
+		if (VERSION >= VERSION_MHWs)
+		{
+			float mhws_unkn1[2];
+			short mhws_unkn2;
+		}
 }ShaderSettings<bgcolor=0x02b72e>/*META:ICON=ItemIconShaderSettings*/;//Example: natives\NSW\vfx\editor\efd_pl\efd_l-swd\efd_0004_l-swd_99_0000.efx.2621987
 typedef struct
 {
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(107);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(107);
+	uint unkn[13];
+	uint solverSize;
+	if (solverSize != 0)
+	{
+		uint expression[solverSize/4];
+	}
 
 }ShaderSettingsExpression<bgcolor=0x056e12>;
 typedef struct
@@ -1749,6 +2208,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[2, 8, 9, 10, 11, 12, 13, 14, 15, 16] + 5923 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint maxParticles;//Values:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10] + 76 more//Unconfirmed
 	uint rawMaxParticles;//Values:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10] + 76 more//Unconfirmed
 	Int2 spawnNum;//Values:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] + 62 more
@@ -1772,7 +2235,7 @@ typedef struct
     */
     Int2 emitterdelayFrame;//Values:[0]
     uint ringBufferMode;
-	if (VERSION >= VERSION_RERT)
+	if (VERSION >= VERSION_RERT && VERSION < VERSION_MHWs)
     {
         uint sb_unkn3<comment="Required Version: MHRSB (.2818730) or above">;//Values:[0, 1]
         //uint sb_unkn4<comment="Required Version: MHRSB (.2818730) or above">;
@@ -1801,6 +2264,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[24, 59, 104, 136, 152, 175, 177, 217, 286, 330] + 66 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint flags;//Values:[1, 3, 4, 5, 12, 16]
 	ExpressionOperator spawnNum;//Values:[0, 1, 2, 4]
 	ExpressionOperator spawnNumRange;//Values:[2, 4]
@@ -1814,7 +2281,10 @@ typedef struct
 	}
 	
 	uint solverSize;//Values:[28, 44, 52, 56, 68, 72, 84, 104, 120, 136] + 1 more
-	uint expression[solverSize/4];
+	if (solverSize != 0)
+	{
+		uint expression[solverSize/4];
+	}
 
 }SpawnExpression<bgcolor=0xfd1e6e>;
 typedef struct
@@ -1865,7 +2335,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 16, 17, 18, 19, 20, 22, 25, 26, 27] + 1118 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1_0;//Values:[0, 994352038, 1000593162, 1008981770, 1014350479, 1015759766, 1017370378, 1020054733, 1022739087, 1025758986] + 52 more
 	float unkn1_1;//Values:[0.0, 0.20000000298023224, 1.0, 2.4200000762939453, 2.7200000286102295, 2.8499999046325684, 2.9200000762939453, 2.9800000190734863, 3.0, 3.2300000190734863] + 217 more
 	Color unkn1_2;//Values:[] + 276 more
@@ -1940,7 +2414,12 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 15, 16, 17, 18, 19, 20, 21, 22, 23] + 2009 more
-    float unkn1;//Values:[0.019999999552965164, 0.02500000037252903, 0.029999999329447746, 0.05000000074505806, 0.05999999865889549, 0.07000000029802322, 0.07999999821186066, 0.09000000357627869, 0.10000000149011612, 0.11999999731779099] + 183 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	float unkn1;//Values:[0.019999999552965164, 0.02500000037252903, 0.029999999329447746, 0.05000000074505806, 0.05999999865889549, 0.07000000029802322, 0.07999999821186066, 0.09000000357627869, 0.10000000149011612, 0.11999999731779099] + 183 more
 	float unkn2;//Values:[0.0, 0.009999999776482582, 0.019999999552965164, 0.029999999329447746, 0.03999999910593033, 0.05000000074505806, 0.05999999865889549, 0.07000000029802322, 0.07500000298023224, 0.07999999821186066] + 72 more
 	float unkn3;//Values:[0.0, 0.029999999329447746, 0.05999999865889549, 0.10000000149011612, 0.11999999731779099, 0.20000000298023224, 0.23000000417232513, 0.25, 0.25999999046325684, 0.27000001072883606] + 10 more
     
@@ -2092,6 +2571,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[1, 13, 19, 90, 92, 207, 232]
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	float pos_x;//Values:[256.0, 288.0, 512.0, 750.0, 800.0, 1024.0, 1500.0]
 	float pos_y;//Values:[-200.0, -100.0, -78.0, -75.0, -4.0, 256.0, 2500.0]
 	uint rot;//Values:[0]
@@ -2115,7 +2599,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1_0;//Values:[1, 4, 8]
 	uint unkn1_1;//Values:[2]
 	uint unkn1_2;//Values:[2]
@@ -2152,6 +2640,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[1, 7, 8, 9, 10, 13, 14, 15, 16, 17] + 5943 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	Vec3 Translation;
 	Vec3 Rotation;
 	Vec3 Scale;
@@ -2163,6 +2655,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[7, 13, 15, 16, 17, 21, 22, 28, 38, 51] + 142 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn0;//Values:[0, 2, 3, 4, 5, 6, 7, 128, 192, 264] + 4 more
 	uint null1;//Values:[0]
 	int unkn2;//Values:[-1, 0, 2]
@@ -2201,6 +2697,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[20, 21, 22, 23, 29, 34, 38, 46, 57, 59] + 524 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1;//Values:[0, 1, 2, 3, 4, 5, 7, 8, 16, 17] + 23 more
 	uint unkn2;//Values:[0, 2, 4]
 	uint unkn3;//Values:[0, 2, 4]
@@ -2212,7 +2712,9 @@ typedef struct
 	uint unkn9;//Values:[0, 1, 2, 3, 4]
 	uint unkn10;//Values:[0, 1, 2, 4]
 	uint solverSize;//Values:[0, 28, 32, 44, 52, 56, 60, 68, 72, 76] + 38 more
-	uint expression[solverSize/4];
+	if (solverSize != 0){
+		uint expression[solverSize/4];
+	}
 
 }Transform3DExpression<optimize=false,bgcolor=0x4081ec>;
 typedef struct
@@ -2220,6 +2722,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 12, 13, 14, 15, 16, 17, 23, 24, 25] + 2024 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1_0;//Values:[0, 1, 2, 3, 4, 5, 6, 7, 18, 19] + 33 more
 	uint null1_1;//Values:[0]
 	float unkn1_2;//Values:[0.0, 0.10000000149011612, 0.20000000298023224, 5.0]
@@ -2282,7 +2788,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[50, 52, 87, 125, 153, 182, 310, 337, 374, 421] + 39 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint frameDelay;//Values:[0, 2, 10, 15, 16, 20, 30, 32, 40, 41] + 8 more
 	uint null1;//Values:[0]
 
@@ -2292,7 +2802,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[5, 17, 23, 43, 55, 87, 95, 97, 115]
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1;//Values:[0, 16]
 	Color color0;
 	Color color1;
@@ -2316,7 +2830,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1_0;//Values:[1, 4, 8]
 	uint unkn1_1;//Values:[2]
 	uint unkn1_2;//Values:[2]
@@ -2340,6 +2858,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[5, 11, 12, 13, 14, 15, 16, 17, 18, 19] + 4566 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1<comment="Might be BlendType">;//Values:[0, 1, 2, 3, 4, 16, 17, 18, 20, 32] + 4 more
 	Color color0;
 	Color color1;
@@ -2370,7 +2892,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[20, 26, 34, 36, 38, 40, 41, 44, 57, 68] + 100 more
-    
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
     if (VERSION >= VERSION_RE4)
     {
         uint re4_unkn0;
@@ -2390,17 +2915,50 @@ typedef struct
 	uint unkn1_12;//Values:[2]
 	uint solverSize;//Values:[28, 44, 56, 68, 88, 104, 124, 140, 172]
 	uint expression[solverSize/4];
-
+	
 }TypeBillboard3DExpression<bgcolor=0x0a2c0f>/*META:ICON=ItemIconPresetExpression*/;
 typedef struct
 {
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(23);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(23);
+	uint unkn0[16];
+	uint texCount;
+	uint unkn1[3];
+	// struct{
+	// 	uint xxxPathLength;
+	// 	wstring xxxPath;
+	// }xxxPath[pathCount]<optimize=false>;
+	uint mdfPathLength;
+	wstring mdfPath;
+	uint mmtrPathLength;
+	wstring mmtrPath;
+	uint solverSize;
+	if (solverSize != 0)
+	{
+		uint expression[solverSize/4];
+	}
+	if (texCount != 0)
+	{
+		struct{
+			uint texPathLength;
+			if (texPathLength != 0)
+			{
+				wstring texPath;
+			}
+		}texPath[texCount]<optimize=false>;
+	}
+	else
+	{
+		uint mhws_unkn1;
+	}
 
 }TypeBillboard3DMaterial<bgcolor=0xfd1e6e>/*META:ICON=ItemIconPreset*/;
 typedef struct
@@ -2408,10 +2966,80 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn0;
+	uint unkn1;
+	uint unkn2;
+	float unkn3;
+	uint substruct1Count;
+	uint substruct2Count;
+	uint substruct3Count;
+	uint substruct1Length;
+	uint substruct2Length;
+	uint substruct3Length;
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn1;
+	}
+	uint indicesCount;//Values:[1, 2, 3, 4]
+	if (substruct1Count != 0)
+	{
+		struct
+		{
+			uint unkn0;
+			uint null1;//Values:[0]
+		}substruct1[substruct1Count];
+	}
+	if (substruct2Count != 0)
+	{
+		struct
+		{
+			float unkn0;
+			uint null1;//Values:[0]
+			uint unkn2;//Values:[2, 3, 4, 5, 6, 7, 8, 12, 14]
+		}substruct2[substruct2Count];//Can be either floats or ints
+	}
+	if (substruct3Count != 0)
+	{
+		struct
+		{
+			float unkn0;
+			uint null1;//Values:[0]
+			uint unkn2;//Values:[2, 3, 4, 5, 6, 7, 8, 12, 14]
+			int unkn3;//Values:[-1, 2]
+		}substruct3[substruct3Count];
+	}
+	if (substruct1Count != 0)
+	{
+		if (VERSION < VERSION_MHWs)
+		{
+			struct
+			{
+				uint hash;
+				uint null1;//Values:[0]
+				uint unkn2;//Values:[2, 3, 4, 5, 6, 7, 8, 12, 14]
+				int unkn3;//Values:[-1, 2]
+			}substruct4[substruct1Count];
+		}
+		else
+		{
+			struct
+			{
+				uint hash;
+				uint null1;//Values:[0]
+				uint unkn2;//Values:[2, 3, 4, 5, 6, 7, 8, 12, 14]
+				int unkn3;//Values:[-1, 2]
+			}substruct4[mhws_unkn1];
+		}
+	}
+	uint indices[indicesCount];
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(24);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(24);
 
 }TypeBillboard3DMaterialClip<bgcolor=0xf57685>/*META:ICON=ItemIconPresetExpression*/;
 typedef struct
@@ -2419,10 +3047,27 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
-	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(25);
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint unkn0[35];
+		uint expressionCount;
+		if (expressionCount != 0)
+		{
+			uint solverSize;
+			uint expression[solverSize/4];
+		}
+		uint unkn1;
+		uint unkn2;
+		// uint mhws_unkn1[unknSeqNum/4 - 1];
+	}
+	else
+	{
+		//STRUCT UNMAPPED
+		Printf("Unmapped Struct, template stopping.");
+		writeErrorToFile(25);
+	}
 
 }TypeBillboard3DMaterialExpression<bgcolor=0x3f16f9>/*META:ICON=ItemIconPresetExpression*/;
 typedef struct
@@ -2430,27 +3075,40 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 14, 15, 16, 17, 18, 19, 21, 23, 24] + 928 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1;//Values:[2, 5, 7, 8, 10, 11, 12, 13, 14, 15] + 56 more
-	uint unkn2;//Values:[0, 1, 2, 8, 9, 12, 16, 17, 18, 64] + 3 more
-	uint unkn3;//Values:[0, 1]
+	if (VERSION < VERSION_MHWs)
+	{
+		uint unkn2;//Values:[0, 1, 2, 8, 9, 12, 16, 17, 18, 64] + 3 more
+		uint unkn3;//Values:[0, 1]
+	}
 	Color color0;
 	Color color1;
 	float emission;//Values:[0.07500000298023224, 0.15000000596046448, 0.5, 0.75, 1.0, 1.2000000476837158, 1.2999999523162842, 1.5, 2.0, 2.5] + 35 more
 	float unkn5;//Values:[0.0, 0.20000000298023224, 1.0, 1.2000000476837158, 1.5, 2.0, 3.0, 4.0, 5.0, 7.0] + 10 more
 	float unkn6;//Values:[0.0, 1.5, 8.0, 10.0, 30.0, 41.0]
 	float unkn7;//Values:[-1.3962634801864624, 0.0, 0.5585054159164429, 0.7853981852531433]
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn1;
+		uint mhws_unkn2;
+	}
 	float unkn8;//Values:[0.0, 0.2617993950843811, 0.5235987901687622, 0.6981317400932312, 0.7853981852531433, 1.5707963705062866, 1.7453293800354004, 3.1415927410125732, 6.2831854820251465]
 	float effectScale;//Values:[0.004999999888241291, 0.007000000216066837, 0.00800000037997961, 0.009999999776482582, 0.012000000104308128, 0.013000000268220901, 0.014999999664723873, 0.017999999225139618, 0.019999999552965164, 0.023000000044703484] + 54 more
 	float unkn10;//Values:[0.0, 0.0010000000474974513, 0.001500000013038516, 0.0020000000949949026, 0.003000000026077032, 0.004999999888241291, 0.006000000052154064, 0.007000000216066837, 0.00800000037997961, 0.009999999776482582] + 31 more
 	float unkn11;//Values:[0.0, 0.20000000298023224, 0.5, 0.699999988079071, 0.800000011920929, 0.8999999761581421, 0.9800000190734863, 1.0, 1.5, 2.0] + 3 more
-    if (VERSION >= VERSION_RERT)
-    {
-        float sb_unkn0<comment="Required Version: MHRSB (.2818730) or above">;//Values:[0.10000000149011612, 0.30000001192092896, 0.4000000059604645, 0.5, 0.6000000238418579, 0.699999988079071, 0.75, 0.800000011920929, 0.8999999761581421, 1.0] + 5 more
-	    float sb_unkn1<comment="Required Version: MHRSB (.2818730) or above">;//Values:[0.0, 0.05000000074505806, 0.10000000149011612, 0.20000000298023224, 0.25, 0.5, 1.0]
-	    float sb_unkn2<comment="Required Version: MHRSB (.2818730) or above">;//Values:[0.10000000149011612, 0.30000001192092896, 0.4000000059604645, 0.5, 0.8999999761581421, 1.0, 1.100000023841858, 1.5, 1.7999999523162842, 2.0] + 2 more
-	    float sb_unkn3<comment="Required Version: MHRSB (.2818730) or above">;//Values:[0.0, 0.05000000074505806, 0.10000000149011612, 0.20000000298023224, 1.0]
-	    float sb_unkn4<comment="Required Version: MHRSB (.2818730) or above">;//Values:[-1.0, 0.0]
-	    float sb_unkn5<comment="Required Version: MHRSB (.2818730) or above">;//Values:[0.0, 1.0]
+	if (VERSION >= VERSION_RERT)
+	{
+		float sb_unkn0<comment="Required Version: MHRSB (.2818730) or above">;//Values:[0.10000000149011612, 0.30000001192092896, 0.4000000059604645, 0.5, 0.6000000238418579, 0.699999988079071, 0.75, 0.800000011920929, 0.8999999761581421, 1.0] + 5 more
+		float sb_unkn1<comment="Required Version: MHRSB (.2818730) or above">;//Values:[0.0, 0.05000000074505806, 0.10000000149011612, 0.20000000298023224, 0.25, 0.5, 1.0]
+		float sb_unkn2<comment="Required Version: MHRSB (.2818730) or above">;//Values:[0.10000000149011612, 0.30000001192092896, 0.4000000059604645, 0.5, 0.8999999761581421, 1.0, 1.100000023841858, 1.5, 1.7999999523162842, 2.0] + 2 more
+		float sb_unkn3<comment="Required Version: MHRSB (.2818730) or above">;//Values:[0.0, 0.05000000074505806, 0.10000000149011612, 0.20000000298023224, 1.0]
+		float sb_unkn4<comment="Required Version: MHRSB (.2818730) or above">;//Values:[-1.0, 0.0]
+		float sb_unkn5<comment="Required Version: MHRSB (.2818730) or above">;//Values:[0.0, 1.0]
 	}
 	
 }TypeGpuBillboard<bgcolor=0xfd1e6e>/*META:ICON=ItemIconPreset*/;//Example: natives\NSW\vfx\editor\efd_pl\efd_l-swd\efd_0004_l-swd_99_0000.efx.2621987
@@ -2459,6 +3117,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[106, 227, 228, 314, 323, 483, 1015, 1772, 2285, 4272] + 3 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 
 	uint unkn1_0;//Values:[0, 1, 17, 32]
 	uint unkn1_1;//Values:[2, 4]
@@ -2468,16 +3130,19 @@ typedef struct
 	uint unkn1_5;//Values:[1, 2]
 	uint unkn1_6;//Values:[2, 4]
 	uint unkn1_7;//Values:[2]
-    if (VERSION >= VERSION_RERT)
-    {
-        uint sb_unkn0<comment="Required Version: MHRSB (.2818730) or above">;
-        uint sb_unkn1<comment="Required Version: MHRSB (.2818730) or above">;
-        uint sb_unkn2<comment="Required Version: MHRSB (.2818730) or above">;
-        uint sb_unkn3<comment="Required Version: MHRSB (.2818730) or above">;
-        uint sb_unkn4<comment="Required Version: MHRSB (.2818730) or above">;
-        uint sb_unkn5<comment="Required Version: MHRSB (.2818730) or above">;
-    }
-	
+	if (VERSION >= VERSION_RERT)
+	{
+			uint sb_unkn0<comment="Required Version: MHRSB (.2818730) or above">;
+			uint sb_unkn1<comment="Required Version: MHRSB (.2818730) or above">;
+			uint sb_unkn2<comment="Required Version: MHRSB (.2818730) or above">;
+			uint sb_unkn3<comment="Required Version: MHRSB (.2818730) or above">;
+			uint sb_unkn4<comment="Required Version: MHRSB (.2818730) or above">;
+			uint sb_unkn5<comment="Required Version: MHRSB (.2818730) or above">;
+	}
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn1;
+	}
 	uint solverSize;//Values:[0, 28, 44, 88]
 	uint expression[solverSize/4];
 
@@ -2583,7 +3248,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+		uint mhws_unkn1;
+	}
 	uint unkn0;
     uint unkn1;
     uint unkn2;
@@ -2591,6 +3260,10 @@ typedef struct
     Color color0;
     Color color1;
     float unkn6;
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn2;
+	}
     uint unkn7;
     uint unkn8;
     uint unkn9;
@@ -2617,6 +3290,10 @@ typedef struct
     float unkn30;
     uint unkn31;
     uint texCount;
+		if (VERSION >= VERSION_MHWs)
+		{
+			uint mhws_unkn2;
+		}
     uint meshPathLength;
     wstring meshPath;
     uint unknPathLength;
@@ -2636,7 +3313,7 @@ typedef struct
             wstring texturePath;
         }texturePath[texCount]<optimize=false>;
     }
-    else
+		else
     {
         uint unkn33;
     }
@@ -2648,10 +3325,18 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint mhws_unkn1[20];
+		uint solverSize;
+		uint expression[solverSize/4];
+		uint mhws_unkn2[(unknSeqNum - solverSize)/4 - 22];
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(177);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(177);
 
 }TypeGpuMeshExpression<bgcolor=0x731727>/*META:ICON=ItemIconPresetExpression*/;
 typedef struct
@@ -2659,10 +3344,41 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint mhws_unkn1[64];
+		uint texCount;
+		uint unkn0;
+		uint meshPathLength;
+		wstring meshPath;
+		uint unknStringLength;
+		wstring unknString;
+		uint mdfPathLength;
+		wstring mdfPath;
+		uint unknStructSize;
+		if ( unknStructSize != 0)
+		{
+			uint unknStructHash;
+			uint unknStruct[unknStructSize/4 - 1];
+		}
+		if (texCount != 0)
+		{
+			struct{
+				uint texPathLength;
+				wstring texPath;
+			}texPath[texCount]<optimize=false>;
+		}
+		else
+		{
+			uint unkn1;
+		}
 
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(178);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(178);
 
 }TypeGpuMeshTrail<bgcolor=0x4081ec>/*META:ICON=ItemIconPreset*/;
 typedef struct
@@ -2670,10 +3386,15 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		float mhws_unkn1[unknSeqNum/4 - 1];
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(179);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(179);
 
 }TypeGpuMeshTrailClip<bgcolor=0xfd1e6e>/*META:ICON=ItemIconExpression*/;
 typedef struct
@@ -2692,14 +3413,27 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 17, 44, 45, 49, 57, 59, 69, 90, 96] + 112 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1;//Values:[8, 15, 20, 30, 32, 50, 64, 72, 74, 128] + 5 more
-	uint unkn2;//Values:[0, 16, 20, 256, 259, 260, 272, 276, 288, 291] + 2 more
-	uint unkn3;//Values:[0, 1]
+	if (VERSION < VERSION_MHWs)
+	{
+		uint unkn2;//Values:[0, 16, 20, 256, 259, 260, 272, 276, 288, 291] + 2 more
+		uint unkn3;//Values:[0, 1]
+	}
 	Color color0;
 	Color color1;
 	float unkn4_0;//Values:[0.0, 0.25, 0.75, 1.0, 1.2999999523162842, 2.0, 3.0, 5.0, 10.0, 15.0] + 6 more
 	float unkn4_1;//Values:[0.0, 1.0, 2.0, 3.0, 4.0, 6.0, 10.0, 20.0, 40.0]
+	if (VERSION >= VERSION_MHWs)
+	{
+		float mhws_unkn1;
+		float mhws_unkn2;
+		uint mhws_unkn3;
+	}
 	float unkn4_2;//Values:[0.0, 1.0, 3.0, 4.0, 6.0, 8.0]
 	uint unkn4_3;//Values:[0, 1070141403]
 	float unkn4_4;//Values:[0.0, 1.5707963705062866, 3.1415927410125732]
@@ -2721,7 +3455,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[14, 25, 26, 28, 35, 53, 64, 67, 73, 80] + 86 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1_0;//Values:[0, 1, 4, 10, 32, 33, 65540]
 	uint unkn1_1;//Values:[0, 1]
 	uint unkn1_2;//Values:[1, 5, 16, 20, 30, 32, 50, 60, 64, 90] + 5 more
@@ -2752,6 +3489,10 @@ typedef struct
 	float unkn3_1;//Values:[0.0, 1.0]
 	uint null3_2;//Values:[0]
 	float unkn3_3;//Values:[0.014999999664723873, 0.019999999552965164, 0.029999999329447746, 0.03999999910593033, 0.05000000074505806, 0.05999999865889549, 0.07999999821186066, 0.10000000149011612, 0.11999999731779099, 0.12999999523162842] + 5 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	float unkn3_4;//Values:[0.0, 0.004999999888241291, 0.009999999776482582, 0.014999999664723873, 0.029999999329447746, 0.03999999910593033, 0.05000000074505806, 0.15000000596046448, 0.5]
 	float unkn3_5;//Values:[0.30000001192092896, 0.4000000059604645, 0.5, 0.6000000238418579, 0.800000011920929, 1.0, 1.399999976158142, 2.0]
 	float unkn3_6;//Values:[0.0, 0.10000000149011612, 0.20000000298023224, 0.5]
@@ -2775,6 +3516,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[13, 14, 15, 22, 24, 25, 26, 27, 28, 33] + 556 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unknBitFlag<comment="The values change between base game and sunbreak, even on files that have no changes. Game will crash when value is set wrong.">;//Values:[397312, 492032, 492544, 983296, 1212672, 1213184, 1215232, 1540352, 1548544, 4624384] + 57 more
 	Color color0;
 	Color color1;
@@ -2857,6 +3603,10 @@ typedef struct
 	
 	float unkn2_71;//Values:[2.802596928649634e-45]
 	float unkn2_72;//Values:[0.800000011920929, 0.949999988079071, 1.0]
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn1;
+	}
 	uint boneNameLength;//Values:[2, 16, 18, 20, 22]
 	wstring boneName;//Values:[22] + 3 more
 
@@ -2866,7 +3616,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[21, 64, 90, 108, 329, 876, 902, 998, 1032, 2082] + 26 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1_0;//Values:[1, 64, 33554432, 33562624, 33595392]
 	uint unkn1_1;//Values:[0, 2, 4]
 	uint unkn1_2;//Values:[2]
@@ -2897,6 +3651,10 @@ typedef struct
 	uint unkn1_27;//Values:[2]
 	uint unkn1_28;//Values:[2]
 	uint unkn1_29;//Values:[2]
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn1[20];
+	}
 	uint solverSize;//Values:[28, 44, 56, 116, 132]
 	uint expression[solverSize/4];
 
@@ -2917,15 +3675,23 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 12, 13, 14, 15, 16, 17, 18, 19, 20] + 2849 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	ubyte unkn1_A;
     ubyte unkn1_B;
     ubyte unkn1_C;
     ubyte unkn1_D;
 	if (VERSION >= VERSION_RE4)
-    {
-        uint re4_unkn0;
-    }
-    Color color0;
+	{
+		uint re4_unkn0;
+	}
+	if (VERSION >= VERSION_MHWs)
+	{
+		float mhws_unkn1;
+	}
+	Color color0;
 	Color color1;
 	float unkn4;//Values:[1.0, 1.2999999523162842, 2.0, 2.5, 3.0, 4.0, 5.0, 10.0, 30.0, 50.0] + 6 more
 	Color color2;
@@ -2956,11 +3722,20 @@ typedef struct
 	float scaleMultiplierVariation;//Values:[0.0, 0.0020000000949949026, 0.004999999888241291, 0.009999999776482582, 0.014999999664723873, 0.019999999552965164, 0.02500000037252903, 0.029999999329447746, 0.03500000014901161, 0.03999999910593033] + 36 more
 	uint unkn23;//Values:[0, 1, 2]
 	uint unkn24;//Values:[32, 48, 64, 80, 96, 112, 128, 144, 160, 176] + 6 more
-    if (VERSION >= VERSION_RE4)
-    {
-        uint re4_unkn1;
-    }
-    uint texCount;//Values:[0, 1, 2, 3]
+	if (VERSION >= VERSION_RE4 && VERSION < VERSION_MHWs)
+	{
+		uint re4_unkn1;
+	}
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn2;
+		float mhws_unkn3;
+	}
+	uint texCount;//Values:[0, 1, 2, 3]
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn4;
+	}
 	uint meshPathLength;//Values:[64, 68, 72, 74, 76, 82, 88, 90, 92, 94] + 18 more
 	wstring meshPath;//Values:[94] + 166 more
 	uint unknPathLength;//Values:[2]
@@ -2969,7 +3744,7 @@ typedef struct
 	wstring mdfPath;//Values:[96] + 116 more
 	if (texCount != 0)
 	{
-        uint mdfPropertiesLength;
+		uint mdfPropertiesLength;
 		struct
 		{
 			uint PropertyNameUTF8Hash;
@@ -3047,6 +3822,12 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[14, 15, 16, 17, 18, 21, 22, 24, 25, 27] + 526 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		// uint mhws_unkn1[unknSeqNum/4 - 1];
+	}
 	uint null1;//Values:[0]
 	uint unkn2;//Values:[2, 3, 4, 5, 6, 7, 8, 12, 14]
 	int unkn3;//Values:[-1, 2]
@@ -3057,6 +3838,10 @@ typedef struct
 	uint substruct1Length;//Values:[8, 16, 24, 32, 48, 56]
 	uint substruct2Length;//Values:[24, 36, 48, 60, 72, 84, 96, 108, 120, 144] + 4 more
 	uint substruct3Length;//Values:[0, 16, 32]
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn1;
+	}
 	uint indicesCount;//Values:[1, 2, 3, 4]
 	if (substruct1Count != 0)
 	{
@@ -3087,16 +3872,28 @@ typedef struct
 	}
 	if (substruct1Count != 0)
 	{
-		struct
+		if (VERSION < VERSION_MHWs)
 		{
-			uint hash;
-			uint null1;//Values:[0]
-			uint unkn2;//Values:[2, 3, 4, 5, 6, 7, 8, 12, 14]
-			int unkn3;//Values:[-1, 2]
-		}substruct4[substruct1Count];
+			struct
+			{
+				uint hash;
+				uint null1;//Values:[0]
+				uint unkn2;//Values:[2, 3, 4, 5, 6, 7, 8, 12, 14]
+				int unkn3;//Values:[-1, 2]
+			}substruct4[substruct1Count];
+		}
+		else
+		{
+			struct
+			{
+				uint hash;
+				uint null1;//Values:[0]
+				uint unkn2;//Values:[2, 3, 4, 5, 6, 7, 8, 12, 14]
+				int unkn3;//Values:[-1, 2]
+			}substruct4[mhws_unkn1];
+		}
 	}
 	uint indices[indicesCount];
-
 }TypeMeshClip<bgcolor=0xf57685>/*META:ICON=ItemIconPresetExpression*/;//Example: natives\NSW\vfx\editor\efd_pl\efd_l-swd\efd_0004_l-swd_00_0010.efx.2621987
 //This typedef struct works for some files but fails on others
 typedef struct
@@ -3104,49 +3901,57 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[17, 27, 31, 47, 49, 83, 112, 118, 134, 136] + 139 more
-	uint substructCount;//Values:[0, 1, 2, 3, 4, 5, 6, 10, 11]
-	uint substructLength;//Values:[0, 44, 60, 76, 84, 88, 104, 120, 132, 136] + 19 more
-	uint indicesCount;//Values:[0, 1, 2, 3, 4, 5]
-	uint unkn4;//Values:[0, 1, 5, 32768, 524288, 2131968]
-	uint unkn5_0;//Values:[0, 2, 4]
-	uint unkn5_1;//Values:[2]
-	uint unkn5_2;//Values:[2, 4]
-	uint unkn5_3;//Values:[2]
-	uint unkn5_4;//Values:[1, 2]
-	uint unkn5_5;//Values:[2]
-	uint unkn5_6;//Values:[2]
-	uint unkn5_7;//Values:[2]
-	uint unkn5_8;//Values:[2]
-	uint unkn5_9;//Values:[2, 4]
-	uint unkn5_10;//Values:[2]
-	uint unkn5_11;//Values:[0, 1, 2, 4]
-	uint unkn5_12;//Values:[0, 2]
-	uint unkn5_13;//Values:[2]
-	uint unkn5_14;//Values:[2]
-	uint unkn5_15;//Values:[0, 2]
-	uint unkn5_16;//Values:[2]
-	uint unkn5_17;//Values:[2]
-	uint unkn5_18;//Values:[2]
-	uint unkn5_19;//Values:[0, 2, 4]
-	uint unkn5_20;//Values:[2]
-	uint unkn5_21;//Values:[0, 2]
-	uint unkn5_22;//Values:[2]
-    
-	uint solverSize;//Values:[0, 28, 44, 56, 68, 132]
-	if (solverSize != 0)
-    {
-	     uint expression[solverSize/4];
-	}
-    if (substructCount != 0)
+	if (VERSION >= VERSION_MHWs)
 	{
-		struct
+		short mhws_unkn0;
+		short mhws_flag;
+		uint mhws_unkn1[unknSeqNum/4 - 1];
+	}else
+	{
+		uint substructCount;//Values:[0, 1, 2, 3, 4, 5, 6, 10, 11]
+		uint substructLength;//Values:[0, 44, 60, 76, 84, 88, 104, 120, 132, 136] + 19 more
+		uint indicesCount;//Values:[0, 1, 2, 3, 4, 5]
+		uint unkn4;//Values:[0, 1, 5, 32768, 524288, 2131968]
+		uint unkn5_0;//Values:[0, 2, 4]
+		uint unkn5_1;//Values:[2]
+		uint unkn5_2;//Values:[2, 4]
+		uint unkn5_3;//Values:[2]
+		uint unkn5_4;//Values:[1, 2]
+		uint unkn5_5;//Values:[2]
+		uint unkn5_6;//Values:[2]
+		uint unkn5_7;//Values:[2]
+		uint unkn5_8;//Values:[2]
+		uint unkn5_9;//Values:[2, 4]
+		uint unkn5_10;//Values:[2]
+		uint unkn5_11;//Values:[0, 1, 2, 4]
+		uint unkn5_12;//Values:[0, 2]
+		uint unkn5_13;//Values:[2]
+		uint unkn5_14;//Values:[2]
+		uint unkn5_15;//Values:[0, 2]
+		uint unkn5_16;//Values:[2]
+		uint unkn5_17;//Values:[2]
+		uint unkn5_18;//Values:[2]
+		uint unkn5_19;//Values:[0, 2, 4]
+		uint unkn5_20;//Values:[2]
+		uint unkn5_21;//Values:[0, 2]
+		uint unkn5_22;//Values:[2]
+			
+		uint solverSize;//Values:[0, 28, 44, 56, 68, 132]
+		if (solverSize != 0)
+			{
+				 uint expression[solverSize/4];
+		}
+		if (substructCount != 0)
 		{
-			uint unkn0[substructLength/4];
-		}substruct<optimize=false>;
-	}
-	if (indicesCount != 0)
-	{
-		uint indices[indicesCount];
+			struct
+			{
+				uint unkn0[substructLength/4];
+			}substruct<optimize=false>;
+		}
+		if (indicesCount != 0)
+		{
+			uint indices[indicesCount];
+		}
 	}
 	
 }TypeMeshExpression<bgcolor=0x85aa32>/*META:ICON=ItemIconPresetExpression*/;//Example: natives\NSW\vfx\editor\efd_pl\efd_s-axe\efd_0004_s-axe_10_0000.efx.2621987
@@ -3166,7 +3971,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 12, 13, 14, 15, 16, 17, 18, 19, 20] + 764 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1_0;//Values:[0, 1]
 	Color color0;
 	Color color1;
@@ -3183,13 +3991,23 @@ typedef struct
 	uint null1_13;//Values:[0]
 	float unkn1_14;//Values:[0.25, 0.699999988079071, 1.0, 2.0, 5.0, 10.0, 20.0, 30.0, 100.0]
 	uint null1_15;//Values:[0]
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		float mhws_unkn1;
+		float mhws_unkn2;
+	}
 }TypeNoDraw<bgcolor=0x0a2c0f>/*META:ICON=ItemIconPreset*/;
 typedef struct
 {
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[204]
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+		uint mhws_unkn1;
+		uint mhws_unkn2;
+	}
 
 	uint unkn1_0;//Values:[1]
 	uint unkn1_1;//Values:[4]
@@ -3287,7 +4105,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[33, 132, 204, 206, 212, 215, 311, 1207, 1937, 2005] + 10 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+		uint mhws_unkn1;
+	}
 	uint unkn1_0;//Values:[0, 460551, 4210688, 67372036, 117901063, 1077952576, 3233857728]
 	uint unkn1_1;//Values:[0, 64]
 	uint unkn1_2;//Values:[2]
@@ -3341,7 +4163,12 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 12, 13, 14, 15, 16, 17, 18, 19, 20] + 935 more
-    uint mFlags;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint mFlags;
 	Color color0;
 	Color color1;
     float unkn2;//Values:[92105297, 135013179, 150994943, 218628264, 218899259, 225533975, 226517076, 226520870, 227594464, 231029369] + 853 more
@@ -3382,7 +4209,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[141, 146, 192, 1538]
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn0;//Values:[256]
 	uint null1;//Values:[0]
 	int unkn2;//Values:[-1, 2]
@@ -3421,7 +4252,12 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[22, 32, 67, 73, 138, 144, 205, 211, 538, 610] + 3 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint mhws_unkn1;
+	}
 	uint unkn1_0;//Values:[1, 8193]
 	uint unkn1_1;//Values:[4]
 	uint unkn1_2;//Values:[2]
@@ -3450,10 +4286,40 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
-	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(60);
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint unkn0[21];
+		uint texCount;
+		uint unkn1;
+		uint unkn2;
+		uint unkn3;
+		uint mdfPathLength;
+		wstring mdfPath;
+		uint mmtrPathLength;
+		wstring mmtrPath;
+		uint unknStructSize;
+		uint unknStructHash;
+		if ( unknStructSize != 0)
+		{
+			uint unknStruct[unknStructSize/4 - 1];
+		}
+		if (texCount != 0)
+		{
+			struct{
+				uint texPathLength;
+				wstring texPath;
+			}texPath[texCount]<optimize=false>;
+		}
+		// uint mhws_unkn1[unknSeqNum/4 - 1];
+	}
+	else
+	{
+		//STRUCT UNMAPPED
+		Printf("Unmapped Struct, template stopping.");
+		writeErrorToFile(60);
+	}
 
 }TypePolygonMaterial<bgcolor=0x056e12>/*META:ICON=ItemIconPreset*/;
 typedef struct
@@ -3461,7 +4327,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[17, 30, 34, 43, 52, 60, 68, 76, 83, 91] + 8 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1;//Values:[0, 3, 4, 512]
 	Color color0;//Values:[-1073741825, -12115186, -9795715, -1, 993725706, 1718257533, 1721485236, 1722139306, 1728053247]
 	Color color1;//Values:[-10412028, -1]
@@ -3469,11 +4339,15 @@ typedef struct
 	float unkn5;//Values:[0.0, 1.0, 12.0]
 	float unkn6;//Values:[0.0, 21.0]
 	float unkn7;//Values:[-0.5, 0.0, 0.9800000190734863]
-    if (VERSION >= VERSION_RERT)
-    {
-        float sb_unkn0<comment="Required Version: MHRSB (.2818730) or above">;
-        
-    }
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn1;
+	}
+	if (VERSION >= VERSION_RERT)
+	{
+		float sb_unkn0<comment="Required Version: MHRSB (.2818730) or above">;
+			
+	}
     
 	uint unkn8;//Values:[1.0]
 	float unkn9;//Values:[0.0, 2.802596928649634e-45]
@@ -3508,7 +4382,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 14, 23, 36, 59, 63, 65, 68, 69, 72] + 102 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1;//Values:[0, 16, 32, 48, 128, 144, 160]
 	Color color0;
 	Color color1;
@@ -3570,24 +4448,39 @@ typedef struct
 	float unkn2_47;//Values:[1.0]
 	float unkn2_48;//Values:[1.0, 5.0]
 	float unkn2_49;//Values:[0.5]
-    if (VERSION >= VERSION_RERT)
-    {
-        float sb_unkn2<comment="Required Version: MHRSB (.2818730) or above">;
-    }
-    if (VERSION >= VERSION_RE4)
-    {
-        float re4_unkn0;
-    }
+	if (VERSION >= VERSION_RERT)
+	{
+			float sb_unkn2<comment="Required Version: MHRSB (.2818730) or above">;
+	}
+	if (VERSION >= VERSION_RE4)
+	{
+			float re4_unkn0;
+	}
+	if (VERSION >= VERSION_MHWs)
+	{
+		float mhws_unkn1[9];
+	}
+
 }TypeRibbonChain<bgcolor=0x363669>/*META:ICON=ItemIconPreset*/;//Example: natives\NSW\vfx\editor\efd_evc\efd_evc1015\efd_0004_evc1015_01_0006.efx.2621987
 typedef struct
 {
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
-	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(55);
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint unkn[18];
+		uint solverSize;
+		uint expression[solverSize/4];
+	}
+	else
+	{
+		//STRUCT UNMAPPED
+		Printf("Unmapped Struct, template stopping.");
+		writeErrorToFile(55);
+	}
 
 }TypeRibbonChainExpression<bgcolor=0xfd1e6e>/*META:ICON=ItemIconPresetExpression*/;
 typedef struct
@@ -3628,7 +4521,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[58, 74, 85, 105, 121, 147, 165, 174, 196, 207] + 115 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1;//Values:[0, 2, 4, 16, 32, 50, 128, 132]
 	Color color0;
 	Color color1;
@@ -3636,6 +4533,10 @@ typedef struct
 	float unkn2_1;//Values:[0.0, 1.0, 3.0, 6.0]
 	uint null2_2;//Values:[0]
 	float unkn2_3;//Values:[0.029999999329447746, 0.20000000298023224, 0.5, 0.699999988079071, 0.800000011920929, 1.0, 1.2999999523162842, 1.5, 2.0, 3.0] + 11 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn1;
+	}
 	float unkn2_4;//Values:[0.0, 0.009999999776482582, 0.019999999552965164, 0.05000000074505806, 0.20000000298023224, 0.30000001192092896, 0.4000000059604645, 0.5, 0.800000011920929, 2.0] + 2 more
 	float unkn2_5;//Values:[0.07500000298023224, 0.10000000149011612, 0.15000000596046448, 0.18000000715255737, 0.20000000298023224, 0.2199999988079071, 0.25, 0.25999999046325684, 0.30000001192092896, 0.4000000059604645] + 9 more
 	uint unkn2_6;//Values:[0, 1017370368, 1017370384, 1020054736, 1022739088, 1028443340, 1028443342, 1028443392, 1036831948, 1036831952] + 5 more
@@ -3675,10 +4576,18 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		// uint mhws_unkn1[unknSeqNum/4 - 1];
+	}
+	uint unkn[18];
+	uint solverSize;
+	uint expression[solverSize/4];
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(56);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(56);
 
 }TypeRibbonFixEndExpression<bgcolor=0x7a5736>/*META:ICON=ItemIconPresetExpression*/;
 typedef struct
@@ -3719,6 +4628,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 12, 13, 14, 15, 16, 17, 18, 19, 20] + 557 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint emission;//Values:[0, 1, 3, 4, 16, 32, 35, 36, 64, 96] + 10 more
 	Color color0;//Values:[-2147483393, -2147467009, -2145181663, -2141549372, -2136956768, -2131107198, -2130706433, -2029977727, -1725684173, -1725092305] + 269 more
 	Color color1;//Values:[-1090321661, -955514878, -780842955, -771751937, -16777216, -16777147, -16777125, -16776961, -16774460, -16772097] + 82 more
@@ -3731,6 +4645,10 @@ typedef struct
 	uint unkn10;//Values:[0, 1000593160, 1000593162, 1000593412, 1008981760, 1008981768, 1008981770, 1008981772, 1008982018, 1017370377] + 29 more
 	float trailWidth;//Values:[1.0, 1.2000000476837158, 2.0, 3.0]
 	float unkn12;//Values:[-1.0, 0.0, 0.4000000059604645, 0.5, 0.699999988079071, 0.800000011920929, 0.9800000190734863, 1.0, 2.0, 3.0] + 1 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn1;
+	}
 	if (VERSION >= VERSION_RERT)
     {
         float sb_unkn0<comment="Required Version: MHRSB (.2818730) or above">;
@@ -3773,7 +4691,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[61, 119, 289, 317, 332, 366, 384, 458, 985, 1173] + 2 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1_0;//Values:[1, 5, 16]
 	uint unkn1_1;//Values:[2, 4]
 	uint unkn1_2;//Values:[2]
@@ -3782,11 +4704,22 @@ typedef struct
 	uint unkn1_5;//Values:[0, 2]
 	uint unkn1_6;//Values:[2]
 	uint unkn1_7;//Values:[2]
-    if (VERSION >= VERSION_RERT)
-    {
-        float sb_unkn0<comment="Required Version: MHRSB (.2818730) or above">;
-        float sb_unkn1<comment="Required Version: MHRSB (.2818730) or above">;
-    }
+	if (VERSION >= VERSION_RERT)
+	{
+		float sb_unkn0<comment="Required Version: MHRSB (.2818730) or above">;
+		float sb_unkn1<comment="Required Version: MHRSB (.2818730) or above">;
+	}
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn1;
+		uint mhws_unkn2;
+		uint mhws_unkn3;
+		uint mhws_unkn4;
+		uint mhws_unkn5;
+		uint mhws_unkn6;
+		uint mhws_unkn7;
+		uint mhws_unkn8;
+	}
 	uint solverSize;//Values:[28, 76, 104]
 	uint expression[solverSize/4];
 
@@ -3870,22 +4803,31 @@ typedef struct
 	float unkn1_33;//Values:[0.5, 0.6000000238418579, 0.699999988079071, 1.0, 1.5, 3.0, 15.0]
 	float unkn1_34;//Values:[0.5, 0.6000000238418579, 0.699999988079071, 1.0, 1.5, 2.0, 3.0, 5.0, 15.0]
 	float unkn1_35;//Values:[0.0, 0.20000000298023224, 0.2199999988079071, 0.25, 0.5, 0.699999988079071, 0.7599999904632568, 1.0]
-    if (VERSION >= VERSION_RERT)
-    {
-        float sb_unkn1<comment="Required Version: MHRSB (.2818730) or above">;
-        float sb_unkn2<comment="Required Version: MHRSB (.2818730) or above">;
-    }
-    if (VERSION >= VERSION_RE4)
-    {
-        float re4_unkn0;
-    }
+	if (VERSION >= VERSION_RERT)
+	{
+		float sb_unkn1<comment="Required Version: MHRSB (.2818730) or above">;
+		float sb_unkn2<comment="Required Version: MHRSB (.2818730) or above">;
+	}
+	if (VERSION >= VERSION_RE4)
+	{
+		float re4_unkn0;
+	}
+	if (VERSION >= VERSION_MHWs)
+	{
+		float mhws_unkn0;
+		float mhws_unkn1;
+	}
 }TypeRibbonLength<bgcolor=0xef6ade>/*META:ICON=ItemIconPreset*/;//Example: natives\NSW\vfx\editor\efd_pl\efd_h-bg\efd_0004_h-bg_20_0000.efx.2621987
 typedef struct
 {
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[165, 275, 336, 990, 1038, 2589, 2648, 2858, 3002, 3033] + 27 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1;//Values:[0, 1, 4, 5, 16, 128]
 	uint unkn2;//Values:[0, 2, 4]
 	uint unkn3;//Values:[2]
@@ -3905,6 +4847,13 @@ typedef struct
         uint sb_unkn6<comment="Required Version: MHRSB (.2818730) or above">;
         uint sb_unkn7<comment="Required Version: MHRSB (.2818730) or above">;
     }
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn1;
+		uint mhws_unkn2;
+		uint mhws_unkn3;
+		uint mhws_unkn4;
+	}
 	uint solverSize;//Values:[0, 28, 44, 68, 104, 124, 176]
 	uint expression[solverSize/4];
 }TypeRibbonLengthExpression<bgcolor=0x363669>/*META:ICON=ItemIconPresetExpression*/;//Example: natives\NSW\vfx\editor\efd_cm\efd_0004_cm_64_0000.efx.2621987
@@ -3913,10 +4862,40 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint unkn[45];
+		uint texCount;
+		uint unkn0;
+		uint unkn1;
+		uint unkn2;
+		uint meshPathLength;
+		wstring meshPath;
+		uint mdfPathLength;
+		wstring mdfPath;
+		uint unknStructSize;
+		if ( unknStructSize != 0)
+		{
+			uint unknStructHash;
+			uint unknStruct[unknStructSize/4 - 1];
+		}
+		if (texCount != 0)
+		{
+			struct{
+				uint texPathLength;
+				wstring texPath;
+			}texPath[texCount]<optimize=false>;
+		}
+		else
+		{
+			uint unkn3;
+		}
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(38);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(38);
 
 }TypeRibbonLengthMaterial<bgcolor=0x056e12>/*META:ICON=ItemIconPreset*/;
 typedef struct
@@ -3924,10 +4903,83 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
-	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(39);
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint unkn0;
+		uint unkn1;
+		uint unkn2;
+		float unkn3;
+		uint substruct1Count;
+		uint substruct2Count;
+		uint substruct3Count;
+		uint substruct1Length;
+		uint substruct2Length;
+		uint substruct3Length;
+		if (VERSION >= VERSION_MHWs)
+		{
+			uint mhws_unkn1;
+		}
+		uint indicesCount;//Values:[1, 2, 3, 4]
+		if (substruct1Count != 0)
+		{
+			struct
+			{
+				uint unkn0;
+				uint null1;//Values:[0]
+			}substruct1[substruct1Count];
+		}
+		if (substruct2Count != 0)
+		{
+			struct
+			{
+				float unkn0;
+				uint null1;//Values:[0]
+				uint unkn2;//Values:[2, 3, 4, 5, 6, 7, 8, 12, 14]
+			}substruct2[substruct2Count];//Can be either floats or ints
+		}
+		if (substruct3Count != 0)
+		{
+			struct
+			{
+				float unkn0;
+				uint null1;//Values:[0]
+				uint unkn2;//Values:[2, 3, 4, 5, 6, 7, 8, 12, 14]
+				int unkn3;//Values:[-1, 2]
+			}substruct3[substruct3Count];
+		}
+		if (substruct1Count != 0)
+		{
+			if (VERSION < VERSION_MHWs)
+			{
+				struct
+				{
+					uint hash;
+					uint null1;//Values:[0]
+					uint unkn2;//Values:[2, 3, 4, 5, 6, 7, 8, 12, 14]
+					int unkn3;//Values:[-1, 2]
+				}substruct4[substruct1Count];
+			}
+			else
+			{
+				struct
+				{
+					uint hash;
+					uint null1;//Values:[0]
+					uint unkn2;//Values:[2, 3, 4, 5, 6, 7, 8, 12, 14]
+					int unkn3;//Values:[-1, 2]
+				}substruct4[mhws_unkn1];
+			}
+		}
+		uint indices[indicesCount];
+	}
+	else
+	{
+		//STRUCT UNMAPPED
+		Printf("Unmapped Struct, template stopping.");
+		writeErrorToFile(39);
+	}
 
 }TypeRibbonLengthMaterialClip<bgcolor=0x0a2c0f>/*META:ICON=ItemIconPresetExpression*/;
 typedef struct
@@ -4004,11 +5056,15 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(34);
-
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(34);
+	float unkn[34];
 }TypeRibbonParticle<bgcolor=0x2a6866>/*META:ICON=ItemIconPreset*/;
 typedef struct
 {
@@ -4036,6 +5092,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 12, 14, 17, 18, 19, 20, 22, 24, 27] + 94 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1_0;//Values:[0, 16, 32, 64, 112, 4096, 4112, 4176, 8256, 8272] + 7 more
 	Color color0;//Values:[] + 17 more
 	Color color1;//Values:[-16776680, -14540213, -11374994, -5121575, -1]
@@ -4100,14 +5161,25 @@ typedef struct
 	uint null1_56;//Values:[0]
 	ubyte unkn2;//Values:[2, 4]
 	float null3_0;//Values:[0.0]
-    if (VERSION >= VERSION_RERT)
-        {
-            float sb_unkn1<comment="Required Version: MHRSB (.2818730) or above">;
-        }
+	if (VERSION >= VERSION_RERT)
+	{
+		float sb_unkn1<comment="Required Version: MHRSB (.2818730) or above">;
+	}
 	float null3_1;//Values:[0.0]
     
 	float unkn3_2;//Values:[0.0, 1.0]
 	float unkn3_3;//Values:[0.0, 6.2831854820251465]
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn1;
+		float mhws_unkn2;
+		float mhws_unkn3;
+		float mhws_unkn4;
+		uint mhws_unkn5;
+		uint mhws_unkn6;
+		uint mhws_unkn7;
+		ubyte mhws_unkn8[3];
+	}
 	uint boneNameLength;//Values:[2, 8, 12, 16, 18, 24, 26]
 	wstring boneName;//Values:[26] + 18 more
     
@@ -4117,7 +5189,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[28, 54, 75, 85, 104, 113, 306, 338, 353, 1129] + 4 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1_0;//Values:[112, 512, 1013, 4609, 5104, 5105]
 	uint unkn1_1;//Values:[2, 4]
 	uint unkn1_2;//Values:[2]
@@ -4132,12 +5208,24 @@ typedef struct
 	uint unkn1_11;//Values:[2, 3]
 	uint unkn1_12;//Values:[2]
 	uint unkn1_13;//Values:[2, 4]
-    if (VERSION >= VERSION_RERT)
-    {
-        float sb_unkn0<comment="Required Version: MHRSB (.2818730) or above">;
-        float sb_unkn1<comment="Required Version: MHRSB (.2818730) or above">;
-    }
-    uint solverSize;
+	if (VERSION >= VERSION_RERT)
+	{
+		float sb_unkn0<comment="Required Version: MHRSB (.2818730) or above">;
+		float sb_unkn1<comment="Required Version: MHRSB (.2818730) or above">;
+	}
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn1;
+		uint mhws_unkn2;
+		uint mhws_unkn3;
+		uint mhws_unkn4;
+		uint mhws_unkn5;
+		uint mhws_unkn6;
+		uint mhws_unkn7;
+		uint mhws_unkn8;
+		uint mhws_unkn9;
+	}
+	uint solverSize;
 	uint expression[solverSize/4];
 
 }TypeStrainRibbonExpression<bgcolor=0x3a2006>/*META:ICON=ItemIconPresetExpression*/;
@@ -4146,10 +5234,45 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
-	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(50);
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		ubyte unkn0[2];
+		uint unkn1[77];
+		uint texCount;
+		uint unkn2;
+		uint unkn3;
+		uint unkn4;
+		uint meshPathLength;
+		wstring meshPath;
+		uint mdfPathLength;
+		wstring mdfPath;
+		uint unknStructSize;
+		if ( unknStructSize != 0)
+		{
+			uint unknStructHash;
+			uint unknStruct[unknStructSize/4 - 1];
+		}
+		uint texPathLength;
+		if (texCount != 0)
+		{
+			struct{
+				wstring texPath;
+			}texPath[texCount]<optimize=false>;
+		}
+		else
+		{
+			uint unkn3;
+		}
+		// ubyte mhws_unkn1[unknSeqNum - 4];
+	}
+	else
+	{
+		//STRUCT UNMAPPED
+		Printf("Unmapped Struct, template stopping.");
+		writeErrorToFile(50);
+	}
 
 }TypeStrainRibbonMaterial<bgcolor=0x08a9e5>/*META:ICON=ItemIconPreset*/;
 typedef struct
@@ -4168,17 +5291,32 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
-	float unkn1_0;
-	float unkn1_1;
-	float unkn1_2;
-	float unkn1_3;
-	float unkn1_4;
-	float unkn1_5;
-	float unkn1_6;
-	float unkn1_7;
-	float unkn1_8;
-	float unkn1_9;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint unkn0[22];
+		uint solverSize;
+		uint expression[solverSize/4];
+		uint unkn1;
+		uint unkn2;
+		uint unkn3;
+		uint unkn4;
+		// uint mhws_unkn1[unknSeqNum/4 - 1];
+	}
+	else
+	{
+		float unkn1_0;
+		float unkn1_1;
+		float unkn1_2;
+		float unkn1_3;
+		float unkn1_4;
+		float unkn1_5;
+		float unkn1_6;
+		float unkn1_7;
+		float unkn1_8;
+		float unkn1_9;
+	}
 
 }TypeStrainRibbonMaterialExpression<bgcolor=0x7a5736>/*META:ICON=ItemIconPresetExpression*/;
 typedef struct
@@ -4186,7 +5324,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[17, 18, 19, 20, 24, 26, 27, 28, 29, 31] + 648 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1_0;//Values:[0, 1]
 	float unkn1_1;//Values:[0.0, 1.0]
 	uint null1_2;//Values:[0]
@@ -4207,6 +5348,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[6, 11, 12, 13, 14, 15, 16, 17, 18, 19] + 5310 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint null1<comment = "Might be SequenceNum">;//Values:[0]
 	uint unkn2<comment = "Might be SequenceNumVariation">;//Values:[1, 2, 5]
 	uint startingFrame;//Values:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] + 21 more
@@ -4222,10 +5367,16 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(84);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(84);
+	uint mhws_unkn1[7];
+	uint solverSize;
+	uint expression[solverSize/4];
 
 }UVSequenceExpression<bgcolor=0x056e12>;
 typedef struct
@@ -4233,7 +5384,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[14, 16, 17, 18, 19, 20, 21, 23, 24, 25] + 335 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1_0;//Values:[1, 2, 3]
 	float unkn1_1;//Values:[0.20000000298023224, 0.30000001192092896, 0.4000000059604645, 0.5, 0.6000000238418579, 0.6499999761581421, 0.699999988079071, 0.800000011920929, 0.8999999761581421, 1.0] + 7 more
 	float unkn1_2;//Values:[0.20000000298023224, 0.30000001192092896, 0.4000000059604645, 0.5, 0.6000000238418579, 0.6499999761581421, 0.699999988079071, 0.800000011920929, 1.0, 1.100000023841858] + 6 more
@@ -4248,7 +5402,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[7, 9, 17, 18, 20, 21, 23, 24, 25, 27] + 889 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1_0;//Values:[33, 34, 35, 37, 38, 39, 295]
 	float unkn1_1;//Values:[-60.0, -15.068702697753906, -15.0, -10.0, -9.0, -7.0, -6.0, -5.898686408996582, -5.816646575927734, -5.0847015380859375] + 151 more
 	float unkn1_2;//Values:[-25533.64453125, -241.9564208984375, -107.4259262084961, -34.78888702392578, -32.540103912353516, -30.0, -24.0, -22.0, -20.0, -19.76772689819336] + 191 more
@@ -4267,7 +5424,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[12, 38, 54, 61, 118, 151, 194, 228, 328, 369] + 45 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1_0;//Values:[0, 1, 4, 6, 8, 9]
 	uint null1_1;//Values:[0]
 	uint unkn1_2;//Values:[-14.0, -10.0, -8.0, -0.25, 0.0, 0.5, 18.0]
@@ -4276,6 +5437,12 @@ typedef struct
 	float unkn1_5;//Values:[0.05000000074505806, 0.20000000298023224, 0.30000001192092896, 0.5, 0.800000011920929, 1.0, 2.0, 2.25, 3.0, 5.0] + 4 more
 	float unkn1_6;//Values:[0.05000000074505806, 0.20000000298023224, 0.30000001192092896, 0.5, 0.800000011920929, 1.0, 1.7999999523162842, 2.0, 3.0, 4.0] + 4 more
 	float unkn1_7;//Values:[0.0, 1.5707963705062866]
+	if (VERSION >= VERSION_MHWs)
+	{
+		float mhws_unkn1;
+		float mhws_unkn2;
+		float mhws_unkn3;
+	}
 	uint null1_8;//Values:[0]
 	uint null1_9;//Values:[0]
 	float unkn1_10;//Values:[0.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 16.0] + 1 more
@@ -4289,7 +5456,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[238, 401, 435, 670, 7317, 7412, 13213, 13444, 13494, 14073]
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1_0;//Values:[4]
 	uint unkn1_1;//Values:[2]
 	uint unkn1_2;//Values:[4]
@@ -4325,7 +5496,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[12, 13, 14, 15, 23, 25, 29, 32, 33, 34] + 289 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	float unkn1_0;//Values:[-1.0, 0.009999999776482582, 0.15000000596046448, 0.20000000298023224, 0.4000000059604645, 0.5, 0.6000000238418579, 0.699999988079071, 0.800000011920929, 0.8500000238418579] + 19 more
 	float unkn1_1;//Values:[0.009999999776482582, 0.10000000149011612, 0.5, 0.699999988079071, 1.0, 2.0, 3.0, 4.0, 5.0, 7.0] + 2 more
 	float unkn1_2;//Values:[0]
@@ -4392,6 +5567,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[560, 567, 580, 622, 647, 691, 834, 932, 2242, 2378] + 1 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint unkn1_0;//Values:[6144, 14336]
 	uint unkn1_1;//Values:[2]
 	uint unkn1_2;//Values:[2]
@@ -4422,7 +5602,11 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[38, 50, 82, 94, 96, 110]
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	float unkn1_0;//Values:[1.3089969158172607, 1.5707963705062866]
 	float unkn1_1;//Values:[0.0, 0.1745329201221466, 0.3490658402442932]
 	float unkn1_2;//Values:[-200.0, 0.5, 1.350000023841858, 10.0, 30.0]
@@ -4451,10 +5635,18 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
-	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(66);
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint mhws_unkn1[unknSeqNum/4 - 1];
+	}
+	else
+	{
+		//STRUCT UNMAPPED
+		Printf("Unmapped Struct, template stopping.");
+		writeErrorToFile(66);
+	}
 
 }Velocity2DDelayFrame<bgcolor=0x85aa32>;
 typedef struct
@@ -4462,10 +5654,21 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
-	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(68);
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint unkn[14];
+		uint solverSize;
+		uint expression[solverSize/4];
+		// uint mhws_unkn1[unknSeqNum/4 - 1];
+	}
+	else
+	{
+		//STRUCT UNMAPPED
+		Printf("Unmapped Struct, template stopping.");
+		writeErrorToFile(68);
+	}
 
 }Velocity2DExpression<bgcolor=0x2f158b>;
 typedef struct
@@ -4473,6 +5676,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[11, 12, 13, 14, 15, 16, 17, 18, 19, 20] + 4703 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1;//Values:[0, 1, 2, 3, 4, 5, 8, 9, 16, 20] + 2 more
 	float unkn2_0;//Values:[-1.0, -0.9993908405303955, -0.9993147850036621, -0.9980973601341248, -0.9975640773773193, -0.9961947202682495, -0.9945219159126282, -0.9942992925643921, -0.9942190051078796, -0.9924038648605347] + 757 more
 	float unkn2_1;//Values:[-0.9396926164627075, -0.7745190858840942, -0.6250000596046448, -0.5334158539772034, -0.5290063619613647, -0.5094095468521118, -0.5064293146133423, -0.5006157159805298, -0.5, -0.4981815218925476] + 463 more
@@ -4503,21 +5710,26 @@ typedef struct
 	float unkn4_4;//Values:[0.0, 0.10000000149011612, 0.20000000298023224, 0.5, 0.8999999761581421, 1.0, 2.0, 3.0, 4.0, 5.0] + 2 more
 	float unkn4_5;//Values:[0.0, 0.10000000149011612, 0.20000000298023224, 0.5, 1.0, 1.5, 2.0, 3.0, 4.0, 5.0] + 3 more
 	if (VERSION >= VERSION_RERT)
-    {
-        float sb_unkn0<comment="Required Version: MHRSB (.2818730) or above">;
-        float sb_unkn1<comment="Required Version: MHRSB (.2818730) or above">;
-    }
-    if (VERSION >= VERSION_RE4)
-    {
-        float re4_unkn2;
-        float re4_unkn3;
-    }
+	{
+		float sb_unkn0<comment="Required Version: MHRSB (.2818730) or above">;
+		float sb_unkn1<comment="Required Version: MHRSB (.2818730) or above">;
+	}
+	if (VERSION >= VERSION_RE4)
+	{
+		float re4_unkn2;
+		float re4_unkn3;
+	}
 }Velocity3D<bgcolor=0xfd1e6e>/*META:ICON=ItemIconVelocity3D*/;//Example: natives\NSW\vfx\editor\efd_pl\efd_s-axe\efd_0004_s-axe_10_0000.efx.2621987
 typedef struct
 {
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[13, 14, 25, 30, 44, 56, 58, 65, 81, 82] + 143 more
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
 	uint frameDelay;//Values:[0, 4, 5, 7, 8, 10, 12, 14, 15, 17] + 30 more
 	uint unkn2;//Values:[0, 1, 2, 3, 5, 10, 15]
 
@@ -4527,7 +5739,10 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;//Values:[59, 83, 100, 139, 283, 294, 1123, 1154, 1232, 1256] + 21 more
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		uint mhws_unkn0;
+	}
 	uint unkn1_0;//Values:[1, 2, 4]
 	uint unkn1_1;//Values:[0, 2]
 	float unkn1_2;//Values:[-10.0, -8.0, 0.0, 15.0, 27.0]
@@ -4593,10 +5808,15 @@ typedef struct
 	local int currentAttributeIndex = -1;
 	uint itemType<bgcolor=0x00CC00>;
 	uint unknSeqNum;
-
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		float mhws_unkn1[unknSeqNum/4 - 1];
+	}
 	//STRUCT UNMAPPED
-	Printf("Unmapped Struct, template stopping.");
-	writeErrorToFile(166);
+	// Printf("Unmapped Struct, template stopping.");
+	// writeErrorToFile(166);
 
 }WindInfluence3D<bgcolor=0x4081ec>;
 typedef struct
@@ -5046,942 +6266,967 @@ typedef struct
     float unkn24;
     float unkn25;
 }unknRE4Struct249_UnknTypeB<bgcolor=0x7a5736>/*META:ICON=ItemIconPreset*/;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	char unkn[114];
+}EffectShader;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	char unkn[34];
+}PtVortexelWind;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint mhws_unkn1[unknSeqNum/4 - 1];
+}TypeLightningExpensive;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	char unkn[104];
+}PtVortexelPhysics;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn1_0;
+	uint unkn1_1;
+	uint unkn1_2;
+	uint unkn1_3;
+	uint unkn1_4;
+	uint unkn1_5;
+	uint unkn1_6;
+	uint unkn1_7;
+	uint unkn1_8;
+	uint solverSize;
+	uint expression[solverSize/4];
+}NoiseExpression;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint csvCount;
+	char unkn[6];
+	struct
+	{
+		uint csvPathLength;
+		wstring csvPath;
+	}csvPath[4]<optimize=false>;
+}AssignCSV;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	char unkn[24];
+
+}PtVortexelPhysicsSimple;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn0;
+	float unkn1;
+	float unkn2;
+	uint unkn3;
+	uint unkn4;
+	float unkn5;
+	uint unkn6;
+	
+}PtLightningBranchAction;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn0[3];
+	uint unknCount;
+	float unkn1[15];
+	uint unkn2;
+	struct{
+		uint unkn3[7];
+	}unkn[unknCount]<optimize=false>;
+	struct{
+		uint unknNameLength;
+		wstring unknName;
+	}unknName[unknCount]<optimize=false>;
+	
+}PtPathTranslate;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	char unkn[82];
+
+}VortexelWindEmitter;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn[11];
+	uint solverSize;
+	uint expression[solverSize/4];
+}VortexelWindEmitterExpression;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn0;
+	float unkn1;
+	float unkn2;
+	float unkn3;
+	float unkn4;
+	float unkn5;
+	float unkn6;
+	if (unknSeqNum != 32){
+		uint nameLength;
+		wstring name;
+	}
+}PtProjection;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn[13];
+}TerrainSnap;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn[23];
+	uint solverSize;
+	uint expression[solverSize/4];
+}RgbCommonExpression;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn0;
+	uint unkn1;
+	uint unkn2;
+	if (unkn1 != 0)
+	{
+		uint layoutNameLength;
+		wstring layoutName;
+		uint unkn[(unknSeqNum - layoutNameLength - 20)/4];
+	}
+}Layout;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	float unkn[5];
+}RepeatArea;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn0;
+}IgnoreSettings;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn[14];
+	uint solverSize;
+	uint expression[solverSize/4];
+}TypeGpuRibbonLengthExpression;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	ubyte unkn[unknSeqNum - 4];
+}PointCloudEmitter;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	ubyte unkn[unknSeqNum - 4];
+}PtFreezer;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		// ubyte unkn[unknSeqNum - 4];
+	}
+}DrawSubscene;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	ubyte unkn[unknSeqNum - 4];
+}TypeGpuMeshClip;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	ubyte unkn[unknSeqNum - 4];
+}FluidParticleEmitterTarget;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	ubyte unkn[unknSeqNum - 4];
+}FluidParticle2DSimulator;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	ubyte unkn[unknSeqNum - 4];
+}FluidParticleEmitter;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	ubyte unkn[unknSeqNum - 4];
+}VortexelCollider;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint unkn1[38];
+		uint texCount;
+		uint unkn2;
+		uint unkn3;
+		uint unkn4;
+		uint meshPathLength;
+		wstring meshPath;
+		uint mdfPathLength;
+		wstring mdfPath;
+		uint unknStructSize;
+		if ( unknStructSize != 0)
+		{
+			uint unknStructHash;
+			uint unknStruct[unknStructSize/4 - 1];
+		}
+		uint texPathLength;
+		if (texCount != 0)
+		{
+			struct{
+				wstring texPath;
+			}texPath[texCount]<optimize=false>;
+		}
+		else
+		{
+			uint unkn3;
+		}
+		// ubyte mhws_unkn1[unknSeqNum - 4];
+	}
+}TypeRibbonParticleMaterial;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn[28];
+	uint solverSize;
+	uint expression[solverSize/4];
+}RgbWaterExpression;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	ubyte unkn[unknSeqNum - 4];
+}Listener;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn[unknSeqNum/4 - 1];
+}PtVortexelSnap;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn0[18];
+	uint solverSize;
+	uint expression[solverSize/4];
+	uint unkn1[(unknSeqNum - solverSize)/4 - 20];
+}TypeRibbonParticleMaterialExpression;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn0[9];
+	uint solverSize;
+	uint expression[solverSize/4];
+}ParentOptionsExpression;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	ubyte unkn[unknSeqNum - 4];
+}VortexelIndoorMask;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+		uint unkn[18];
+		uint solverSize;
+		uint expression[solverSize/4];
+	}
+}TypeRibbonParticleExpression;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn[5];
+	uint solverSize;
+	uint expression[solverSize/4];
+}PtPathTranslateExpression;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn[20];
+	uint solverSize;
+	uint expression[solverSize/4];
+}TypeGpuPolygonExpression;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	float unkn0;
+	uint unkn1;
+	short unkn2;
+	uint unkn3;
+	// ubyte unkn[unknSeqNum - 4];
+}PtVortexelHeatSource;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn[unknSeqNum/4 - 1];
+}Trigger;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn0;
+	float unkn1;
+	uint unkn2;
+	// ubyte unkn[unknSeqNum - 4];
+}PtLightningColliderAction;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn[5];
+	uint solverSize;
+	uint expression[solverSize/4];
+	// uint unkn[unknSeqNum/4 - 1];
+}PtVortexelWindExpression;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	float unkn[unknSeqNum/4 - 1];
+}PtCollisionInfluence;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn[unknSeqNum/4 - 1];
+}FluidParticle2DSimulatorExpression;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn[unknSeqNum/4 - 1];
+}PtColorMixer;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn[10];
+	uint solverSize;
+	uint expression[solverSize/4];
+	// uint unkn[unknSeqNum/4 - 1];
+}TypeGpuRibbonFollowExpression;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn[10];
+	uint solverSize;
+	uint expression[solverSize/4];
+}PtTransform3DExpression;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	uint unkn[unknSeqNum/4 - 1];
+}FixRandomGeneratorExpression;
+
+typedef struct{
+	local int currentAttributeIndex = -1;
+	uint itemType<bgcolor=0x00CC00>;
+	uint unknSeqNum;
+	if (VERSION >= VERSION_MHWs)
+	{
+		short mhws_unkn0;
+		short mhws_flag;
+	}
+	ubyte unkn[unknSeqNum - 4];
+}NewMHWsUndefinedEnum;
+
 void GetEFXItemStruct(string itemType)
 {
 //EFX Item Type Enum Switch
 	switch(itemType)
 	{
-        case "AlphaCorrection":
-			{
-				AlphaCorrection attribute;
-			};break;
-		case "AngularVelocity2D":
-			{
-				AngularVelocity2D attribute;
-			};break;
-		case "AngularVelocity2DDelayFrame":
-			{
-				AngularVelocity2DDelayFrame attribute;
-			};break;
-		case "AngularVelocity3D":
-			{
-				AngularVelocity3D attribute;
-			};break;
-		case "AngularVelocity3DDelayFrame":
-			{
-				AngularVelocity3DDelayFrame attribute;
-			};break;
-		case "Attractor":
-			{
-				Attractor attribute;
-			};break;
-		case "AttractorClip":
-			{
-				AttractorClip attribute;
-			};break;
-		case "AttractorExpression":
-			{
-				AttractorExpression attribute;
-			};break;
-		case "Blink":
-			{
-				Blink attribute;
-			};break;
-		case "ColorGrading":
-			{
-				ColorGrading attribute;
-			};break;
-		case "ContrastHighlighter":
-			{
-				ContrastHighlighter attribute;
-			};break;
-		case "CustomComputeShader":
-			{
-				CustomComputeShader attribute;
-			};break;
-		case "DepthOcclusion":
-			{
-				DepthOcclusion attribute;
-			};break;
-		case "DepthOperator":
-			{
-				DepthOperator attribute;
-			};break;
-		case "DirectionalField":
-			{
-				DirectionalField attribute;
-			};break;
-		case "DirectionalFieldParameter":
-			{
-				DirectionalFieldParameter attribute;
-			};break;
-		case "DirectionalFieldParameterClip":
-			{
-				DirectionalFieldParameterClip attribute;
-			};break;
-		case "DirectionalFieldParameterExpression":
-			{
-				DirectionalFieldParameterExpression attribute;
-			};break;
-		case "Distortion":
-			{
-				Distortion attribute;
-			};break;
-		case "DistortionExpression":
-			{
-				DistortionExpression attribute;
-			};break;
-		case "DrawOverlay":
-			{
-				DrawOverlay attribute;
-			};break;
-		case "EffectOptimizeShader":
-			{
-				EffectOptimizeShader attribute;
-			};break;
-		case "EmitMask":
-			{
-				EmitMask attribute;
-			};break;
-		case "EmitterColor":
-			{
-				EmitterColor attribute;
-			};break;
-		case "EmitterColorClip":
-			{
-				EmitterColorClip attribute;
-			};break;
-		case "EmitterHSV":
-			{
-				EmitterHSV attribute;
-			};break;
-		case "EmitterHSVExpression":
-			{
-				EmitterHSVExpression attribute;
-			};break;
-		case "EmitterPriority":
-			{
-				EmitterPriority attribute;
-			};break;
-		case "EmitterShape2D":
-			{
-				EmitterShape2D attribute;
-			};break;
-		case "EmitterShape2DExpression":
-			{
-				EmitterShape2DExpression attribute;
-			};break;
-		case "EmitterShape3D":
-			{
-				EmitterShape3D attribute;
-			};break;
-		case "EmitterShape3DExpression":
-			{
-				EmitterShape3DExpression attribute;
-			};break;
-		case "FadeByAngle":
-			{
-				FadeByAngle attribute;
-			};break;
-		case "FadeByAngleExpression":
-			{
-				FadeByAngleExpression attribute;
-			};break;
-		case "FadeByDepth":
-			{
-				FadeByDepth attribute;
-			};break;
-		case "FadeByDepthExpression":
-			{
-				FadeByDepthExpression attribute;
-			};break;
-		case "FadeByEmitterAngle":
-			{
-				FadeByEmitterAngle attribute;
-			};break;
-		case "FadeByOcclusion":
-			{
-				FadeByOcclusion attribute;
-			};break;
-		case "FadeByOcclusionExpression":
-			{
-				FadeByOcclusionExpression attribute;
-			};break;
-		case "FakeDoF":
-			{
-				FakeDoF attribute;
-			};break;
-		case "FixRandomGenerator":
-			{
-				FixRandomGenerator attribute;
-			};break;
-		case "FlowMap":
-			{
-				FlowMap attribute;
-			};break;
-		case "FluidEmitter2D":
-			{
-				FluidEmitter2D attribute;
-			};break;
-		case "FluidSimulator2D":
-			{
-				FluidSimulator2D attribute;
-			};break;
-		case "GlobalVectorField":
-			{
-				GlobalVectorField attribute;
-			};break;
-		case "GlobalVectorFieldClip":
-			{
-				GlobalVectorFieldClip attribute;
-			};break;
-		case "GlobalVectorFieldExpression":
-			{
-				GlobalVectorFieldExpression attribute;
-			};break;
-		case "IgnorePlayerColor":
-			{
-				IgnorePlayerColor attribute;
-			};break;
-		case "ItemNum":
-			{
-				ItemNum attribute;
-			};break;
-		case "Life":
-			{
-				Life attribute;
-			};break;
-		case "LifeExpression":
-			{
-				LifeExpression attribute;
-			};break;
-		case "LuminanceBleed":
-			{
-				LuminanceBleed attribute;
-			};break;
-		case "MeshEmitter":
-			{
-				MeshEmitter attribute;
-			};break;
-		case "MeshEmitterClip":
-			{
-				MeshEmitterClip attribute;
-			};break;
-		case "MeshEmitterExpression":
-			{
-				MeshEmitterExpression attribute;
-			};break;
-		case "Noise":
-			{
-				Noise attribute;
-			};break;
-		case "ParentOptions":
-			{
-				ParentOptions attribute;
-			};break;
-		case "PlaneCollider":
-			{
-				PlaneCollider attribute;
-			};break;
-		case "PlaneColliderExpression":
-			{
-				PlaneColliderExpression attribute;
-			};break;
-		case "PlayEfx":
-			{
-				PlayEfx attribute;
-			};break;
-		case "PlayEmitter":
-			{
-				PlayEmitter attribute;
-			};break;
-		case "ProceduralDistortion":
-			{
-				ProceduralDistortion attribute;
-			};break;
-		case "ProceduralDistortionClip":
-			{
-				ProceduralDistortionClip attribute;
-			};break;
-		case "ProceduralDistortionDelayFrame":
-			{
-				ProceduralDistortionDelayFrame attribute;
-			};break;
-		case "ProceduralDistortionExpression":
-			{
-				ProceduralDistortionExpression attribute;
-			};break;
-		case "PtAngularVelocity2D":
-			{
-				PtAngularVelocity2D attribute;
-			};break;
-		case "PtAngularVelocity2DExpression":
-			{
-				PtAngularVelocity2DExpression attribute;
-			};break;
-		case "PtAngularVelocity3D":
-			{
-				PtAngularVelocity3D attribute;
-			};break;
-		case "PtAngularVelocity3DExpression":
-			{
-				PtAngularVelocity3DExpression attribute;
-			};break;
-		case "PtBehavior":
-			{
-				PtBehavior attribute;
-			};break;
-		case "PtBehaviorClip":
-			{
-				PtBehaviorClip attribute;
-			};break;
-		case "PtColliderAction":
-			{
-				PtColliderAction attribute;
-			};break;
-		case "PtCollision":
-			{
-				PtCollision attribute;
-			};break;
-		case "PtColor":
-			{
-				PtColor attribute;
-			};break;
-		case "PtColorClip":
-			{
-				PtColorClip attribute;
-			};break;
-		case "PtLife":
-			{
-				PtLife attribute;
-			};break;
-		case "PtSort":
-			{
-				PtSort attribute;
-			};break;
-		case "PtTransform2D":
-			{
-				PtTransform2D attribute;
-			};break;
-		case "PtTransform2DClip":
-			{
-				PtTransform2DClip attribute;
-			};break;
-		case "PtTransform3D":
-			{
-				PtTransform3D attribute;
-			};break;
-		case "PtTransform3DClip":
-			{
-				PtTransform3DClip attribute;
-			};break;
-		case "PtUvSequence":
-			{
-				PtUvSequence attribute;
-			};break;
-		case "PtUvSequenceClip":
-			{
-				PtUvSequenceClip attribute;
-			};break;
-		case "PtVelocity2D":
-			{
-				PtVelocity2D attribute;
-			};break;
-		case "PtVelocity2DClip":
-			{
-				PtVelocity2DClip attribute;
-			};break;
-		case "PtVelocity3D":
-			{
-				PtVelocity3D attribute;
-			};break;
-		case "PtVelocity3DClip":
-			{
-				PtVelocity3DClip attribute;
-			};break;
-		case "RenderTarget":
-			{
-				RenderTarget attribute;
-			};break;
-		case "RgbCommon":
-			{
-				RgbCommon attribute;
-			};break;
-		case "RgbWater":
-			{
-				RgbWater attribute;
-			};break;
-		case "RotateAnim":
-			{
-				RotateAnim attribute;
-			};break;
-		case "RotateAnimDelayFrame":
-			{
-				RotateAnimDelayFrame attribute;
-			};break;
-		case "RotateAnimExpression":
-			{
-				RotateAnimExpression attribute;
-			};break;
-		case "ScaleAnim":
-			{
-				ScaleAnim attribute;
-			};break;
-		case "ScaleAnimDelayFrame":
-			{
-				ScaleAnimDelayFrame attribute;
-			};break;
-		case "ScaleAnimExpression":
-			{
-				ScaleAnimExpression attribute;
-			};break;
-		case "ScaleByDepth":
-			{
-				ScaleByDepth attribute;
-			};break;
-		case "ScreenSpaceEmitter":
-			{
-				ScreenSpaceEmitter attribute;
-			};break;
-		case "ShaderSettings":
-			{
-				ShaderSettings attribute;
-			};break;
-		case "ShaderSettingsExpression":
-			{
-				ShaderSettingsExpression attribute;
-			};break;
-		case "ShapeOperator":
-			{
-				ShapeOperator attribute;
-			};break;
-		case "ShapeOperatorExpression":
-			{
-				ShapeOperatorExpression attribute;
-			};break;
-		case "Spawn":
-			{
-				Spawn attribute;
-			};break;
-		case "SpawnExpression":
-			{
-				SpawnExpression attribute;
-			};break;
-		case "StretchBlur":
-			{
-				StretchBlur attribute;
-			};break;
-		case "StretchBlurExpression":
-			{
-				StretchBlurExpression attribute;
-			};break;
-		case "TestBehaviorUpdater":
-			{
-				TestBehaviorUpdater attribute;
-			};break;
-		case "TexelChannelOperator":
-			{
-				TexelChannelOperator attribute;
-			};break;
-		case "TexelChannelOperatorClip":
-			{
-				TexelChannelOperatorClip attribute;
-			};break;
-		case "TexelChannelOperatorExpression":
-			{
-				TexelChannelOperatorExpression attribute;
-			};break;
-		case "TextureFilter":
-			{
-				TextureFilter attribute;
-			};break;
-		case "TextureUnit":
-			{
-				TextureUnit attribute;
-			};break;
-		case "TextureUnitExpression":
-			{
-				TextureUnitExpression attribute;
-			};break;
-		case "Transform2D":
-			{
-				Transform2D attribute;
-			};break;
-		case "Transform2DClip":
-			{
-				Transform2DClip attribute;
-			};break;
-		case "Transform2DExpression":
-			{
-				Transform2DExpression attribute;
-			};break;
-		case "Transform2DModifier":
-			{
-				Transform2DModifier attribute;
-			};break;
-		case "Transform2DModifierDelayFrame":
-			{
-				Transform2DModifierDelayFrame attribute;
-			};break;
-		case "Transform3D":
-			{
-				Transform3D attribute;
-			};break;
-		case "Transform3DClip":
-			{
-				Transform3DClip attribute;
-			};break;
-		case "Transform3DExpression":
-			{
-				Transform3DExpression attribute;
-			};break;
-		case "Transform3DModifier":
-			{
-				Transform3DModifier attribute;
-			};break;
-		case "Transform3DModifierDelayFrame":
-			{
-				Transform3DModifierDelayFrame attribute;
-			};break;
-		case "TypeBillboard2D":
-			{
-				TypeBillboard2D attribute;
-			};break;
-		case "TypeBillboard2DExpression":
-			{
-				TypeBillboard2DExpression attribute;
-			};break;
-		case "TypeBillboard3D":
-			{
-				TypeBillboard3D attribute;
-			};break;
-		case "TypeBillboard3DExpression":
-			{
-				TypeBillboard3DExpression attribute;
-			};break;
-		case "TypeBillboard3DMaterial":
-			{
-				TypeBillboard3DMaterial attribute;
-			};break;
-		case "TypeBillboard3DMaterialClip":
-			{
-				TypeBillboard3DMaterialClip attribute;
-			};break;
-		case "TypeBillboard3DMaterialExpression":
-			{
-				TypeBillboard3DMaterialExpression attribute;
-			};break;
-		case "TypeGpuBillboard":
-			{
-				TypeGpuBillboard attribute;
-			};break;
-		case "TypeGpuBillboardExpression":
-			{
-				TypeGpuBillboardExpression attribute;
-			};break;
-		case "TypeGpuLightning3D":
-			{
-				TypeGpuLightning3D attribute;
-			};break;
-		case "TypeGpuMesh":
-			{
-				TypeGpuMesh attribute;
-			};break;
-		case "TypeGpuMeshExpression":
-			{
-				TypeGpuMeshExpression attribute;
-			};break;
-		case "TypeGpuMeshTrail":
-			{
-				TypeGpuMeshTrail attribute;
-			};break;
-		case "TypeGpuMeshTrailClip":
-			{
-				TypeGpuMeshTrailClip attribute;
-			};break;
-		case "TypeGpuMeshTrailExpression":
-			{
-				TypeGpuMeshTrailExpression attribute;
-			};break;
-		case "TypeGpuPolygon":
-			{
-				TypeGpuPolygon attribute;
-			};break;
-		case "TypeGpuRibbonFollow":
-			{
-				TypeGpuRibbonFollow attribute;
-			};break;
-		case "TypeGpuRibbonLength":
-			{
-				TypeGpuRibbonLength attribute;
-			};break;
-		case "TypeLightning3D":
-			{
-				TypeLightning3D attribute;
-			};break;
-		case "TypeLightning3DExpression":
-			{
-				TypeLightning3DExpression attribute;
-			};break;
-		case "TypeLightning3DMaterial":
-			{
-				TypeLightning3DMaterial attribute;
-			};break;
-		case "TypeMesh":
-			{
-				TypeMesh attribute;
-			};break;
-		case "TypeMeshClip":
-			{
-				TypeMeshClip attribute;
-			};break;
-		case "TypeMeshExpression":
-			{
-				TypeMeshExpression attribute;
-			};break;
-		case "TypeModularBillboard":
-			{
-				TypeModularBillboard attribute;
-			};break;
-		case "TypeNoDraw":
-			{
-				TypeNoDraw attribute;
-			};break;
-		case "TypeNoDrawExpression":
-			{
-				TypeNoDrawExpression attribute;
-			};break;
-		case "TypeNodeBillboard":
-			{
-				TypeNodeBillboard attribute;
-			};break;
-		case "TypeNodeBillboardExpression":
-			{
-				TypeNodeBillboardExpression attribute;
-			};break;
-		case "TypePolygon":
-			{
-				TypePolygon attribute;
-			};break;
-		case "TypePolygonClip":
-			{
-				TypePolygonClip attribute;
-			};break;
-		case "TypePolygonExpression":
-			{
-				TypePolygonExpression attribute;
-			};break;
-		case "TypePolygonMaterial":
-			{
-				TypePolygonMaterial attribute;
-			};break;
-		case "TypePolygonTrail":
-			{
-				TypePolygonTrail attribute;
-			};break;
-		case "TypePolygonTrailMaterial":
-			{
-				TypePolygonTrailMaterial attribute;
-			};break;
-		case "TypeRibbonChain":
-			{
-				TypeRibbonChain attribute;
-			};break;
-		case "TypeRibbonChainExpression":
-			{
-				TypeRibbonChainExpression attribute;
-			};break;
-		case "TypeRibbonChainMaterial":
-			{
-				TypeRibbonChainMaterial attribute;
-			};break;
-		case "TypeRibbonChainMaterialClip":
-			{
-				TypeRibbonChainMaterialClip attribute;
-			};break;
-		case "TypeRibbonChainMaterialExpression":
-			{
-				TypeRibbonChainMaterialExpression attribute;
-			};break;
-		case "TypeRibbonFixEnd":
-			{
-				TypeRibbonFixEnd attribute;
-			};break;
-		case "TypeRibbonFixEndExpression":
-			{
-				TypeRibbonFixEndExpression attribute;
-			};break;
-		case "TypeRibbonFixEndMaterial":
-			{
-				TypeRibbonFixEndMaterial attribute;
-			};break;
-		case "TypeRibbonFixEndMaterialClip":
-			{
-				TypeRibbonFixEndMaterialClip attribute;
-			};break;
-		case "TypeRibbonFixEndMaterialExpression":
-			{
-				TypeRibbonFixEndMaterialExpression attribute;
-			};break;
-		case "TypeRibbonFollow":
-			{
-				TypeRibbonFollow attribute;
-			};break;
-		case "TypeRibbonFollowExpression":
-			{
-				TypeRibbonFollowExpression attribute;
-			};break;
-		case "TypeRibbonFollowMaterial":
-			{
-				TypeRibbonFollowMaterial attribute;
-			};break;
-		case "TypeRibbonFollowMaterialClip":
-			{
-				TypeRibbonFollowMaterialClip attribute;
-			};break;
-		case "TypeRibbonFollowMaterialExpression":
-			{
-				TypeRibbonFollowMaterialExpression attribute;
-			};break;
-		case "TypeRibbonLength":
-			{
-				TypeRibbonLength attribute;
-			};break;
-		case "TypeRibbonLengthExpression":
-			{
-				TypeRibbonLengthExpression attribute;
-			};break;
-		case "TypeRibbonLengthMaterial":
-			{
-				TypeRibbonLengthMaterial attribute;
-			};break;
-		case "TypeRibbonLengthMaterialClip":
-			{
-				TypeRibbonLengthMaterialClip attribute;
-			};break;
-		case "TypeRibbonLengthMaterialExpression":
-			{
-				TypeRibbonLengthMaterialExpression attribute;
-			};break;
-		case "TypeRibbonLightweight":
-			{
-				TypeRibbonLightweight attribute;
-			};break;
-		case "TypeRibbonLightweightMaterial":
-			{
-				TypeRibbonLightweightMaterial attribute;
-			};break;
-		case "TypeRibbonLightweightMaterialClip":
-			{
-				TypeRibbonLightweightMaterialClip attribute;
-			};break;
-		case "TypeRibbonLightweightMaterialExpression":
-			{
-				TypeRibbonLightweightMaterialExpression attribute;
-			};break;
-		case "TypeRibbonParticle":
-			{
-				TypeRibbonParticle attribute;
-			};break;
-		case "TypeRibbonTrail":
-			{
-				TypeRibbonTrail attribute;
-			};break;
-		case "TypeStrainRibbon":
-			{
-				TypeStrainRibbon attribute;
-			};break;
-		case "TypeStrainRibbonExpression":
-			{
-				TypeStrainRibbonExpression attribute;
-			};break;
-		case "TypeStrainRibbonMaterial":
-			{
-				TypeStrainRibbonMaterial attribute;
-			};break;
-		case "TypeStrainRibbonMaterialClip":
-			{
-				TypeStrainRibbonMaterialClip attribute;
-			};break;
-		case "TypeStrainRibbonMaterialExpression":
-			{
-				TypeStrainRibbonMaterialExpression attribute;
-			};break;
-		case "UVScroll":
-			{
-				UVScroll attribute;
-			};break;
-		case "UVSequence":
-			{
-				UVSequence attribute;
-			};break;
-		case "UVSequenceExpression":
-			{
-				UVSequenceExpression attribute;
-			};break;
-		case "UVSequenceModifier":
-			{
-				UVSequenceModifier attribute;
-			};break;
-		case "UnitCulling":
-			{
-				UnitCulling attribute;
-			};break;
-		case "VanishArea3D":
-			{
-				VanishArea3D attribute;
-			};break;
-		case "VanishArea3DExpression":
-			{
-				VanishArea3DExpression attribute;
-			};break;
-		case "VectorField":
-			{
-				VectorField attribute;
-			};break;
-		case "VectorFieldParameter":
-			{
-				VectorFieldParameter attribute;
-			};break;
-		case "VectorFieldParameterClip":
-			{
-				VectorFieldParameterClip attribute;
-			};break;
-		case "VectorFieldParameterExpression":
-			{
-				VectorFieldParameterExpression attribute;
-			};break;
-		case "Velocity2D":
-			{
-				Velocity2D attribute;
-			};break;
-		case "Velocity2DDelayFrame":
-			{
-				Velocity2DDelayFrame attribute;
-			};break;
-		case "Velocity2DExpression":
-			{
-				Velocity2DExpression attribute;
-			};break;
-		case "Velocity3D":
-			{
-				Velocity3D attribute;
-			};break;
-		case "Velocity3DDelayFrame":
-			{
-				Velocity3DDelayFrame attribute;
-			};break;
-		case "Velocity3DExpression":
-			{
-				Velocity3DExpression attribute;
-			};break;
-		case "VolumeField":
-			{
-				VolumeField attribute;
-			};break;
-		case "VolumetricLighting":
-			{
-				VolumetricLighting attribute;
-			};break;
-		case "WindInfluence3D":
-			{
-				WindInfluence3D attribute;
-			};break;
-		case "WindInfluence3DDelayFrame":
-			{
-				WindInfluence3DDelayFrame attribute;
-			};break;
-		case "unknSBStruct100_ContrastHighlighter":
-			{
-				unknSBStruct100_ContrastHighlighter attribute;
-			};break;
-		case "unknSBStruct104_NoiseExpression":
-			{
-				unknSBStruct104_NoiseExpression attribute;
-			};break;
-		case "unknSBStruct156_MeshEmitter":
-			{
-				unknSBStruct156_MeshEmitter attribute;
-			};break;
-		case "unknSBStruct189_PtAngularVelocity3D":
-			{
-				unknSBStruct189_PtAngularVelocity3D attribute;
-			};break;
-		case "unknSBStruct195":
-			{
-				unknSBStruct195 attribute;
-			};break;
+		case "AlphaCorrection":{AlphaCorrection attribute;};break;
+		case "AngularVelocity2D":{AngularVelocity2D attribute;};break;
+		case "AngularVelocity2DDelayFrame":{AngularVelocity2DDelayFrame attribute;};break;
+		case "AngularVelocity3D":{AngularVelocity3D attribute;};break;
+		case "AngularVelocity3DDelayFrame":{AngularVelocity3DDelayFrame attribute;};break;
+		case "Attractor":{Attractor attribute;};break;
+		case "AttractorClip":{AttractorClip attribute;};break;
+		case "AttractorExpression":{AttractorExpression attribute;};break;
+		case "Blink":{Blink attribute;};break;
+		case "ColorGrading":{ColorGrading attribute;};break;
+		case "ContrastHighlighter":{ContrastHighlighter attribute;};break;
+		case "CustomComputeShader":{CustomComputeShader attribute;};break;
+		case "DepthOcclusion":{DepthOcclusion attribute;};break;
+		case "DepthOperator":{DepthOperator attribute;};break;
+		case "DirectionalField":{DirectionalField attribute;};break;
+		case "DirectionalFieldParameter":{DirectionalFieldParameter attribute;};break;
+		case "DirectionalFieldParameterClip":{DirectionalFieldParameterClip attribute;};break;
+		case "DirectionalFieldParameterExpression":{DirectionalFieldParameterExpression attribute;};break;
+		case "Distortion":{Distortion attribute;};break;
+		case "DistortionExpression":{DistortionExpression attribute;};break;
+		case "DrawOverlay":{DrawOverlay attribute;};break;
+		case "EffectOptimizeShader":{EffectOptimizeShader attribute;};break;
+		case "EmitMask":{EmitMask attribute;};break;
+		case "EmitterColor":{EmitterColor attribute;};break;
+		case "EmitterColorClip":{EmitterColorClip attribute;};break;
+		case "EmitterHSV":{EmitterHSV attribute;};break;
+		case "EmitterHSVExpression":{EmitterHSVExpression attribute;};break;
+		case "EmitterPriority":{EmitterPriority attribute;};break;
+		case "EmitterShape2D":{EmitterShape2D attribute;};break;
+		case "EmitterShape2DExpression":{EmitterShape2DExpression attribute;};break;
+		case "EmitterShape3D":{EmitterShape3D attribute;};break;
+		case "EmitterShape3DExpression":{EmitterShape3DExpression attribute;};break;
+		case "FadeByAngle":{FadeByAngle attribute;};break;
+		case "FadeByAngleExpression":{FadeByAngleExpression attribute;};break;
+		case "FadeByDepth":{FadeByDepth attribute;};break;
+		case "FadeByDepthExpression":{FadeByDepthExpression attribute;};break;
+		case "FadeByEmitterAngle":{FadeByEmitterAngle attribute;};break;
+		case "FadeByOcclusion":{FadeByOcclusion attribute;};break;
+		case "FadeByOcclusionExpression":{FadeByOcclusionExpression attribute;};break;
+		case "FakeDoF":{FakeDoF attribute;};break;
+		case "FixRandomGenerator":{FixRandomGenerator attribute;};break;
+		case "FlowMap":{FlowMap attribute;};break;
+		case "FluidEmitter2D":{FluidEmitter2D attribute;};break;
+		case "FluidSimulator2D":{FluidSimulator2D attribute;};break;
+		case "GlobalVectorField":{GlobalVectorField attribute;};break;
+		case "GlobalVectorFieldClip":{GlobalVectorFieldClip attribute;};break;
+		case "GlobalVectorFieldExpression":{GlobalVectorFieldExpression attribute;};break;
+		case "IgnorePlayerColor":{IgnorePlayerColor attribute;};break;
+		case "ItemNum":{ItemNum attribute;};break;
+		case "Life":{Life attribute;};break;
+		case "LifeExpression":{LifeExpression attribute;};break;
+		case "LuminanceBleed":{LuminanceBleed attribute;};break;
+		case "MeshEmitter":{MeshEmitter attribute;};break;
+		case "MeshEmitterClip":{MeshEmitterClip attribute;};break;
+		case "MeshEmitterExpression":{MeshEmitterExpression attribute;};break;
+		case "Noise":{Noise attribute;};break;
+		case "ParentOptions":{ParentOptions attribute;};break;
+		case "PlaneCollider":{PlaneCollider attribute;};break;
+		case "PlaneColliderExpression":{PlaneColliderExpression attribute;};break;
+		case "PlayEfx":{PlayEfx attribute;};break;
+		case "PlayEmitter":{PlayEmitter attribute;};break;
+		case "ProceduralDistortion":{ProceduralDistortion attribute;};break;
+		case "ProceduralDistortionClip":{ProceduralDistortionClip attribute;};break;
+		case "ProceduralDistortionDelayFrame":{ProceduralDistortionDelayFrame attribute;};break;
+		case "ProceduralDistortionExpression":{ProceduralDistortionExpression attribute;};break;
+		case "PtAngularVelocity2D":{PtAngularVelocity2D attribute;};break;
+		case "PtAngularVelocity2DExpression":{PtAngularVelocity2DExpression attribute;};break;
+		case "PtAngularVelocity3D":{PtAngularVelocity3D attribute;};break;
+		case "PtAngularVelocity3DExpression":{PtAngularVelocity3DExpression attribute;};break;
+		case "PtBehavior":{PtBehavior attribute;};break;
+		case "PtBehaviorClip":{PtBehaviorClip attribute;};break;
+		case "PtColliderAction":{PtColliderAction attribute;};break;
+		case "PtCollision":{PtCollision attribute;};break;
+		case "PtColor":{PtColor attribute;};break;
+		case "PtColorClip":{PtColorClip attribute;};break;
+		case "PtLife":{PtLife attribute;};break;
+		case "PtSort":{PtSort attribute;};break;
+		case "PtTransform2D":{PtTransform2D attribute;};break;
+		case "PtTransform2DClip":{PtTransform2DClip attribute;};break;
+		case "PtTransform3D":{PtTransform3D attribute;};break;
+		case "PtTransform3DClip":{PtTransform3DClip attribute;};break;
+		case "PtUvSequence":{PtUvSequence attribute;};break;
+		case "PtUvSequenceClip":{PtUvSequenceClip attribute;};break;
+		case "PtVelocity2D":{PtVelocity2D attribute;};break;
+		case "PtVelocity2DClip":{PtVelocity2DClip attribute;};break;
+		case "PtVelocity3D":{PtVelocity3D attribute;};break;
+		case "PtVelocity3DClip":{PtVelocity3DClip attribute;};break;
+		case "RenderTarget":{RenderTarget attribute;};break;
+		case "RgbCommon":{RgbCommon attribute;};break;
+		case "RgbWater":{RgbWater attribute;};break;
+		case "RotateAnim":{RotateAnim attribute;};break;
+		case "RotateAnimDelayFrame":{RotateAnimDelayFrame attribute;};break;
+		case "RotateAnimExpression":{RotateAnimExpression attribute;};break;
+		case "ScaleAnim":{ScaleAnim attribute;};break;
+		case "ScaleAnimDelayFrame":{ScaleAnimDelayFrame attribute;};break;
+		case "ScaleAnimExpression":{ScaleAnimExpression attribute;};break;
+		case "ScaleByDepth":{ScaleByDepth attribute;};break;
+		case "ScreenSpaceEmitter":{ScreenSpaceEmitter attribute;};break;
+		case "ShaderSettings":{ShaderSettings attribute;};break;
+		case "ShaderSettingsExpression":{ShaderSettingsExpression attribute;};break;
+		case "ShapeOperator":{ShapeOperator attribute;};break;
+		case "ShapeOperatorExpression":{ShapeOperatorExpression attribute;};break;
+		case "Spawn":{Spawn attribute;};break;
+		case "SpawnExpression":{SpawnExpression attribute;};break;
+		case "StretchBlur":{StretchBlur attribute;};break;
+		case "StretchBlurExpression":{StretchBlurExpression attribute;};break;
+		case "TestBehaviorUpdater":{TestBehaviorUpdater attribute;};break;
+		case "TexelChannelOperator":{TexelChannelOperator attribute;};break;
+		case "TexelChannelOperatorClip":{TexelChannelOperatorClip attribute;};break;
+		case "TexelChannelOperatorExpression":{TexelChannelOperatorExpression attribute;};break;
+		case "TextureFilter":{TextureFilter attribute;};break;
+		case "TextureUnit":{TextureUnit attribute;};break;
+		case "TextureUnitExpression":{TextureUnitExpression attribute;};break;
+		case "Transform2D":{Transform2D attribute;};break;
+		case "Transform2DClip":{Transform2DClip attribute;};break;
+		case "Transform2DExpression":{Transform2DExpression attribute;};break;
+		case "Transform2DModifier":{Transform2DModifier attribute;};break;
+		case "Transform2DModifierDelayFrame":{Transform2DModifierDelayFrame attribute;};break;
+		case "Transform3D":{Transform3D attribute;};break;
+		case "Transform3DClip":{Transform3DClip attribute;};break;
+		case "Transform3DExpression":{Transform3DExpression attribute;};break;
+		case "Transform3DModifier":{Transform3DModifier attribute;};break;
+		case "Transform3DModifierDelayFrame":{Transform3DModifierDelayFrame attribute;};break;
+		case "TypeBillboard2D":{TypeBillboard2D attribute;};break;
+		case "TypeBillboard2DExpression":{TypeBillboard2DExpression attribute;};break;
+		case "TypeBillboard3D":{TypeBillboard3D attribute;};break;
+		case "TypeBillboard3DExpression":{TypeBillboard3DExpression attribute;};break;
+		case "TypeBillboard3DMaterial":{TypeBillboard3DMaterial attribute;};break;
+		case "TypeBillboard3DMaterialClip":{TypeBillboard3DMaterialClip attribute;};break;
+		case "TypeBillboard3DMaterialExpression":{TypeBillboard3DMaterialExpression attribute;};break;
+		case "TypeGpuBillboard":{TypeGpuBillboard attribute;};break;
+		case "TypeGpuBillboardExpression":{TypeGpuBillboardExpression attribute;};break;
+		case "TypeGpuLightning3D":{TypeGpuLightning3D attribute;};break;
+		case "TypeGpuMesh":{TypeGpuMesh attribute;};break;
+		case "TypeGpuMeshExpression":{TypeGpuMeshExpression attribute;};break;
+		case "TypeGpuMeshTrail":{TypeGpuMeshTrail attribute;};break;
+		case "TypeGpuMeshTrailClip":{TypeGpuMeshTrailClip attribute;};break;
+		case "TypeGpuMeshTrailExpression":{TypeGpuMeshTrailExpression attribute;};break;
+		case "TypeGpuPolygon":{TypeGpuPolygon attribute;};break;
+		case "TypeGpuRibbonFollow":{TypeGpuRibbonFollow attribute;};break;
+		case "TypeGpuRibbonLength":{TypeGpuRibbonLength attribute;};break;
+		case "TypeLightning3D":{TypeLightning3D attribute;};break;
+		case "TypeLightning3DExpression":{TypeLightning3DExpression attribute;};break;
+		case "TypeLightning3DMaterial":{TypeLightning3DMaterial attribute;};break;
+		case "TypeMesh":{TypeMesh attribute;};break;
+		case "TypeMeshClip":{TypeMeshClip attribute;};break;
+		case "TypeMeshExpression":{TypeMeshExpression attribute;};break;
+		case "TypeModularBillboard":{TypeModularBillboard attribute;};break;
+		case "TypeNoDraw":{TypeNoDraw attribute;};break;
+		case "TypeNoDrawExpression":{TypeNoDrawExpression attribute;};break;
+		case "TypeNodeBillboard":{TypeNodeBillboard attribute;};break;
+		case "TypeNodeBillboardExpression":{TypeNodeBillboardExpression attribute;};break;
+		case "TypePolygon":{TypePolygon attribute;};break;
+		case "TypePolygonClip":{TypePolygonClip attribute;};break;
+		case "TypePolygonExpression":{TypePolygonExpression attribute;};break;
+		case "TypePolygonMaterial":{TypePolygonMaterial attribute;};break;
+		case "TypePolygonTrail":{TypePolygonTrail attribute;};break;
+		case "TypePolygonTrailMaterial":{TypePolygonTrailMaterial attribute;};break;
+		case "TypeRibbonChain":{TypeRibbonChain attribute;};break;
+		case "TypeRibbonChainExpression":{TypeRibbonChainExpression attribute;};break;
+		case "TypeRibbonChainMaterial":{TypeRibbonChainMaterial attribute;};break;
+		case "TypeRibbonChainMaterialClip":{TypeRibbonChainMaterialClip attribute;};break;
+		case "TypeRibbonChainMaterialExpression":{TypeRibbonChainMaterialExpression attribute;};break;
+		case "TypeRibbonFixEnd":{TypeRibbonFixEnd attribute;};break;
+		case "TypeRibbonFixEndExpression":{TypeRibbonFixEndExpression attribute;};break;
+		case "TypeRibbonFixEndMaterial":{TypeRibbonFixEndMaterial attribute;};break;
+		case "TypeRibbonFixEndMaterialClip":{TypeRibbonFixEndMaterialClip attribute;};break;
+		case "TypeRibbonFixEndMaterialExpression":{TypeRibbonFixEndMaterialExpression attribute;};break;
+		case "TypeRibbonFollow":{TypeRibbonFollow attribute;};break;
+		case "TypeRibbonFollowExpression":{TypeRibbonFollowExpression attribute;};break;
+		case "TypeRibbonFollowMaterial":{TypeRibbonFollowMaterial attribute;};break;
+		case "TypeRibbonFollowMaterialClip":{TypeRibbonFollowMaterialClip attribute;};break;
+		case "TypeRibbonFollowMaterialExpression":{TypeRibbonFollowMaterialExpression attribute;};break;
+		case "TypeRibbonLength":{TypeRibbonLength attribute;};break;
+		case "TypeRibbonLengthExpression":{TypeRibbonLengthExpression attribute;};break;
+		case "TypeRibbonLengthMaterial":{TypeRibbonLengthMaterial attribute;};break;
+		case "TypeRibbonLengthMaterialClip":{TypeRibbonLengthMaterialClip attribute;};break;
+		case "TypeRibbonLengthMaterialExpression":{TypeRibbonLengthMaterialExpression attribute;};break;
+		case "TypeRibbonLightweight":{TypeRibbonLightweight attribute;};break;
+		case "TypeRibbonLightweightMaterial":{TypeRibbonLightweightMaterial attribute;};break;
+		case "TypeRibbonLightweightMaterialClip":{TypeRibbonLightweightMaterialClip attribute;};break;
+		case "TypeRibbonLightweightMaterialExpression":{TypeRibbonLightweightMaterialExpression attribute;};break;
+		case "TypeRibbonParticle":{TypeRibbonParticle attribute;};break;
+		case "TypeRibbonTrail":{TypeRibbonTrail attribute;};break;
+		case "TypeStrainRibbon":{TypeStrainRibbon attribute;};break;
+		case "TypeStrainRibbonExpression":{TypeStrainRibbonExpression attribute;};break;
+		case "TypeStrainRibbonMaterial":{TypeStrainRibbonMaterial attribute;};break;
+		case "TypeStrainRibbonMaterialClip":{TypeStrainRibbonMaterialClip attribute;};break;
+		case "TypeStrainRibbonMaterialExpression":{TypeStrainRibbonMaterialExpression attribute;};break;
+		case "UVScroll":{UVScroll attribute;};break;
+		case "UVSequence":{UVSequence attribute;};break;
+		case "UVSequenceExpression":{UVSequenceExpression attribute;};break;
+		case "UVSequenceModifier":{UVSequenceModifier attribute;};break;
+		case "UnitCulling":{UnitCulling attribute;};break;
+		case "VanishArea3D":{VanishArea3D attribute;};break;
+		case "VanishArea3DExpression":{VanishArea3DExpression attribute;};break;
+		case "VectorField":{VectorField attribute;};break;
+		case "VectorFieldParameter":{VectorFieldParameter attribute;};break;
+		case "VectorFieldParameterClip":{VectorFieldParameterClip attribute;};break;
+		case "VectorFieldParameterExpression":{VectorFieldParameterExpression attribute;};break;
+		case "Velocity2D":{Velocity2D attribute;};break;
+		case "Velocity2DDelayFrame":{Velocity2DDelayFrame attribute;};break;
+		case "Velocity2DExpression":{Velocity2DExpression attribute;};break;
+		case "Velocity3D":{Velocity3D attribute;};break;
+		case "Velocity3DDelayFrame":{Velocity3DDelayFrame attribute;};break;
+		case "Velocity3DExpression":{Velocity3DExpression attribute;};break;
+		case "VolumeField":{VolumeField attribute;};break;
+		case "VolumetricLighting":{VolumetricLighting attribute;};break;
+		case "WindInfluence3D":{WindInfluence3D attribute;};break;
+		case "WindInfluence3DDelayFrame":{WindInfluence3DDelayFrame attribute;};break;
+		case "unknSBStruct100_ContrastHighlighter":{unknSBStruct100_ContrastHighlighter attribute;};break;
+		case "unknSBStruct104_NoiseExpression":{unknSBStruct104_NoiseExpression attribute;};break;
+		case "unknSBStruct156_MeshEmitter":{unknSBStruct156_MeshEmitter attribute;};break;
+		case "unknSBStruct189_PtAngularVelocity3D":{unknSBStruct189_PtAngularVelocity3D attribute;};break;
+		case "unknSBStruct195":{unknSBStruct195 attribute;};break;
         
-        //STRUCT INSERT SCRIPT SWITCH POINT <>
-		case "unknRE4Struct243_UnknGPUBillboard":
-			{
-				unknRE4Struct243_UnknGPUBillboard attribute;
-			};break;
-        case "unknRE4Struct247_UnknTypeGPU":
-			{
-				unknRE4Struct247_UnknTypeGPU attribute;
-			};break;
-        case "unknRE4Struct109":
-			{
-				unknRE4Struct109 attribute;
-			};break;
-		case "unknRE4Struct130":
-			{
-				unknRE4Struct130 attribute;
-			};break;
-		case "unknRE4Struct195":
-			{
-				unknRE4Struct195 attribute;
-			};break;
-		case "unknRE4Struct123":
-			{
-				unknRE4Struct123 attribute;
-			};break;
-		case "unknRE4Struct200":
-			{
-				unknRE4Struct200 attribute;
-			};break;
-		case "unknRE4Struct16":
-			{
-				unknRE4Struct16 attribute;
-			};break;
-        case "unknRE4Struct185":
-			{
-				unknRE4Struct185 attribute;
-			};break;
-        case "unknRE4Struct226":
-			{
-				unknRE4Struct226 attribute;
-			};break;
-        case "unknRE4Struct110":
-			{
-				unknRE4Struct110 attribute;
-			};break;
-        case "unknRE4Struct231":
-			{
-				unknRE4Struct231 attribute;
-			};break;
-        case "unknRE4Struct197":
-			{
-				unknRE4Struct197 attribute;
-			};break;
-        case "unknRE4Struct184":
-			{
-				unknRE4Struct184 attribute;
-			};break;
-        case "unknRE4Struct245_UnknType":
-			{
-				unknRE4Struct245_UnknType attribute;
-			};break;
-        case "unknRE4Struct191":
-			{
-				unknRE4Struct191 attribute;
-			};break;
-        case "unknRE4Struct249_UnknTypeB":
-			{
-				unknRE4Struct249_UnknTypeB attribute;
-			};break;
-
+		//STRUCT INSERT SCRIPT SWITCH POINT <>
+		case "unknRE4Struct243_UnknGPUBillboard":{unknRE4Struct243_UnknGPUBillboard attribute;};break;
+		case "unknRE4Struct247_UnknTypeGPU":{unknRE4Struct247_UnknTypeGPU attribute;};break;
+		case "unknRE4Struct109":{unknRE4Struct109 attribute;};break;
+		case "unknRE4Struct130":{unknRE4Struct130 attribute;};break;
+		case "unknRE4Struct195":{unknRE4Struct195 attribute;};break;
+		case "unknRE4Struct123":{unknRE4Struct123 attribute;};break;
+		case "unknRE4Struct200":{unknRE4Struct200 attribute;};break;
+		case "unknRE4Struct16":{unknRE4Struct16 attribute;};break;
+		case "unknRE4Struct185":{unknRE4Struct185 attribute;};break;
+		case "unknRE4Struct226":{unknRE4Struct226 attribute;};break;
+		case "unknRE4Struct110":{unknRE4Struct110 attribute;};break;
+		case "unknRE4Struct231":{unknRE4Struct231 attribute;};break;
+		case "unknRE4Struct197":{unknRE4Struct197 attribute;};break;
+		case "unknRE4Struct184":{unknRE4Struct184 attribute;};break;
+		case "unknRE4Struct245_UnknType":{unknRE4Struct245_UnknType attribute;};break;
+		case "unknRE4Struct191":{unknRE4Struct191 attribute;};break;
+		case "unknRE4Struct249_UnknTypeB":{unknRE4Struct249_UnknTypeB attribute;};break;
+		
+		// Add New ItemType MHWs Used
+		case "EffectShader":{EffectShader attribute;};break;
+		case "PtVortexelWind":{PtVortexelWind attribute;};break;
+		case "TypeLightningExpensive":{TypeLightningExpensive attribute;};break;
+		case "PtVortexelPhysics":{PtVortexelPhysics attribute;};break;
+		case "NoiseExpression":{NoiseExpression attribute;};break;
+		case "AssignCSV":{AssignCSV attribute;};break;
+		case "PtVortexelPhysicsSimple":{PtVortexelPhysicsSimple attribute;};break;
+		case "PtLightningBranchAction":{PtLightningBranchAction attribute;};break;
+		case "PtPathTranslate":{PtPathTranslate attribute;};break;
+		case "VortexelWindEmitter":{VortexelWindEmitter attribute;};break;
+		case "VortexelWindEmitterExpression":{VortexelWindEmitterExpression attribute;};break;
+		case "PtProjection":{PtProjection attribute;};break;
+		case "TerrainSnap":{TerrainSnap attribute;};break;
+		case "RgbCommonExpression":{RgbCommonExpression attribute;};break;
+		case "Layout":{Layout attribute;};break;
+		case "RepeatArea":{RepeatArea attribute;};break;
+		case "IgnoreSettings":{IgnoreSettings attribute;};break;
+		case "TypeGpuRibbonLengthExpression":{TypeGpuRibbonLengthExpression attribute;};break;
+		case "PointCloudEmitter":{PointCloudEmitter attribute;};break;
+		case "PtFreezer":{PtFreezer attribute;};break;
+		case "DrawSubscene":{DrawSubscene attribute;};break;
+		case "TypeGpuMeshClip":{TypeGpuMeshClip attribute;};break;
+		case "FluidParticleEmitterTarget":{FluidParticleEmitterTarget attribute;};break;
+		case "FluidParticle2DSimulator":{FluidParticle2DSimulator attribute;};break;
+		case "FluidParticleEmitter":{FluidParticleEmitter attribute;};break;
+		case "VortexelCollider":{VortexelCollider attribute;};break;
+		case "TypeRibbonParticleMaterial":{TypeRibbonParticleMaterial attribute;};break;
+		case "RgbWaterExpression":{RgbWaterExpression attribute;};break;
+		case "Listener":{Listener attribute;};break;
+		case "PtVortexelSnap":{PtVortexelSnap attribute;};break;
+		case "TypeRibbonParticleMaterialExpression":{TypeRibbonParticleMaterialExpression attribute;};break;
+		case "ParentOptionsExpression":{ParentOptionsExpression attribute;};break;
+		case "VortexelIndoorMask":{VortexelIndoorMask attribute;};break;
+		case "TypeRibbonParticleExpression":{TypeRibbonParticleExpression attribute;};break;
+		case "PtPathTranslateExpression":{PtPathTranslateExpression attribute;};break;
+		case "TypeGpuPolygonExpression":{TypeGpuPolygonExpression attribute;};break;
+		case "PtVortexelHeatSource":{PtVortexelHeatSource attribute;};break;
+		case "Trigger":{Trigger attribute;};break;
+		case "PtLightningColliderAction":{PtLightningColliderAction attribute;};break;
+		case "PtVortexelWindExpression":{PtVortexelWindExpression attribute;};break;
+		case "PtCollisionInfluence":{PtCollisionInfluence attribute;};break;
+		case "FluidParticle2DSimulatorExpression":{FluidParticle2DSimulatorExpression attribute;};break;
+		case "PtColorMixer":{PtColorMixer attribute;};break;
+		case "TypeGpuRibbonFollowExpression":{TypeGpuRibbonFollowExpression attribute;};break;
+		case "PtTransform3DExpression":{PtTransform3DExpression attribute;};break;
+		case "FixRandomGeneratorExpression":{FixRandomGeneratorExpression attribute;};break;
 
 		default:
 			{

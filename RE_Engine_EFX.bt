@@ -97,6 +97,7 @@ const uint VERSION_MHRSB = 2818730;
 const uint VERSION_SF6 = 3474371;
 const uint VERSION_RE4 = 3539837;
 const uint VERSION_DD2 = 4064419;
+const uint VERSION_MHWs = 5571972;
 
 
 //
@@ -149,6 +150,11 @@ switch(VERSION)
     case VERSION_DD2:
     {
         Printf("Dragon's Dogma 2\nNOTE: GAME IS NOT SUPPORTED BY THE TEMPLATE YET\n");
+        break;
+    }
+    case VERSION_MHWs:
+    {
+        Printf("Monster Hunter Wilds\nNOTE: GAME IS NOT SUPPORTED BY THE TEMPLATE YET\n");
         break;
     }
 
@@ -243,6 +249,8 @@ typedef struct
 {
 	string str;
 	wstring unicodeStr;
+    // if efx name has ivy with template error, please disable pad comment
+    // ubyte pad[2];
 }UnicodeEntryName<bgcolor=0x226622,optimize=false>;
 
 typedef struct 
@@ -317,7 +325,11 @@ typedef struct
 	float unkn8;
 	float unkn9;
 	float unkn10;
-	if (type == 110 || type == 184 || type == 202 || type == 194)
+	if (VERSION >= VERSION_MHWs)
+	{
+		float mhws_unkn0;
+	}
+	if (type == 110 || type == 184 || type == 202 || type == 194 || type == 217)
 	{
 		uint pathUnicodeCharCount;
 		wstring filePath;
@@ -362,7 +374,11 @@ typedef struct
 	uint actionUnkn0;
 	uint actionNameHash;
 	uint actionAttributeCount;
-	ReadEFXAttribute();
+    local int i;
+    for(i=0;i<actionAttributeCount;i++){
+        ReadEFXAttribute();
+        attribute[i].currentAttributeIndex = i;
+    }
 }Action;
 
 typedef struct
@@ -415,16 +431,15 @@ typedef struct
 	//Some files have the uvarString count higher than 0 but have no strings.
 	//Uncomment the section below to test it
 	
-	/*
-	if (uvarStringCount != 0)
+
+	if (uvarStringCount > 1)
 	{
-		struct
-		{
-			uint stringLength;
-			wstring uvarString;
-		}uvarString[uvarStringCount]<optimize=false>;
+        struct
+        {
+            uint stringLength;
+            wstring uvarString;
+        }uvarString[uvarStringCount]<optimize=false>;
 	}
-	*/
 }EOF<bgcolor=0x000000>;
 
 
@@ -919,6 +934,12 @@ string ReadBoneTypeLightning3D(TypeLightning3D& input){
         extra = "Enter \"None\" to detach.";
     }
 	SPrintf(s, "Attachment Point: %s | Enter a bone name here to set the attachment bone. %s", s, extra);
+	return s;
+}
+
+string ReadAssignCSV(AssignCSV& input){
+	string s;
+	SPrintf(s, "%s", input.csvPath);
 	return s;
 }
 

@@ -1,0 +1,4 @@
+D:\Software\Game\Platform\Steam\steamapps\common\MonsterHunterWilds\MHWILDS_EXTRACT\re_chunk_000\natives\STM\Art\VFX\EffectEditor\Enemy\em_cm\em_state\11_em_fallivy_01.efx.5571972
+D:\Software\Game\Platform\Steam\steamapps\common\MonsterHunterWilds\MHWILDS_EXTRACT\re_chunk_000\natives\STM\Art\VFX\EffectEditor\Enemy\em_cm\em_state\11_em_fallivy_03.efx.5571972
+D:\Software\Game\Platform\Steam\steamapps\common\MonsterHunterWilds\MHWILDS_EXTRACT\re_chunk_000\natives\STM\Art\VFX\EffectEditor\Enemy\em_cm\em_state\11_em_fallivy_05.efx.5571972
+D:\Software\Game\Platform\Steam\steamapps\common\MonsterHunterWilds\MHWILDS_EXTRACT\re_chunk_000\natives\STM\Art\VFX\EffectEditor\Enemy\em_cm\em_state\11_em_ivytrap_00.efx.5571972
